@@ -1,0 +1,10 @@
+# Ignore directories
+node_modules
+.next
+out
+coverage
+
+# Ignore specific file types
+*.lock
+package.json
+package-lock.json
