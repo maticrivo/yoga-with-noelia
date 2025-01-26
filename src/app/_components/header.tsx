@@ -1,27 +1,30 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Burger, Button, Drawer, Group, Stack, Title } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+
+import { Link } from "@/i18n/routing";
 
 export function HeaderComponent() {
   const [drawerOpened, { close: closeDrawer, toggle: toggleDrawer }] =
     useDisclosure(false);
+  const t = useTranslations("Header");
 
   return (
     <>
       <Group align="center" h="100%" justify="space-between">
-        <Title order={1}>Yoga con Noelia</Title>
+        <Title order={1}>{t("title")}</Title>
 
         <Group visibleFrom="sm">
           <Link href="/sobre-mi" passHref>
-            <Button variant="subtle">Sobre Mí</Button>
+            <Button variant="subtle">{t("about")}</Button>
           </Link>
           <Link href="/horario" passHref>
-            <Button variant="subtle">Clases</Button>
+            <Button variant="subtle">{t("classes")}</Button>
           </Link>
           <Link href="/contacto" passHref>
-            <Button variant="subtle">Contacto</Button>
+            <Button variant="subtle">{t("contact")}</Button>
           </Link>
         </Group>
 
@@ -38,24 +41,19 @@ export function HeaderComponent() {
         onClose={closeDrawer}
       >
         <Stack>
-          <Link href="/" passHref>
+          <Link href="/sobre-mi" passHref>
             <Button fullWidth variant="subtle" onClick={closeDrawer}>
-              Inicio
+              {t("about")}
             </Button>
           </Link>
           <Link href="/horario" passHref>
             <Button fullWidth variant="subtle" onClick={closeDrawer}>
-              Horario
-            </Button>
-          </Link>
-          <Link href="/sobre-mi" passHref>
-            <Button fullWidth variant="subtle" onClick={closeDrawer}>
-              Sobre Mí
+              {t("classes")}
             </Button>
           </Link>
           <Link href="/contacto" passHref>
             <Button fullWidth variant="subtle" onClick={closeDrawer}>
-              Contacto
+              {t("contact")}
             </Button>
           </Link>
         </Stack>

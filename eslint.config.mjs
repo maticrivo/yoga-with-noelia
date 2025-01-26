@@ -33,6 +33,7 @@ const config = [
         },
       ],
 
+      "react/jsx-no-literals": "warn",
       "react/jsx-sort-props": [
         "error",
         {
@@ -40,6 +41,24 @@ const config = [
           ignoreCase: true,
           reservedFirst: true,
           noSortAlphabetically: false,
+        },
+      ],
+
+      "no-restricted-imports": [
+        "error",
+        {
+          name: "next/link",
+          message: "Please import from `@/i18n/routing` instead.",
+        },
+        {
+          name: "next/navigation",
+          importNames: [
+            "redirect",
+            "permanentRedirect",
+            "useRouter",
+            "usePathname",
+          ],
+          message: "Please import from `@/i18n/routing` instead.",
         },
       ],
     },

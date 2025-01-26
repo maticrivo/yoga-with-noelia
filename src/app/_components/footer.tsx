@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { ActionIcon, Group, Text } from "@mantine/core";
 import {
   IconBrandFacebook,
@@ -6,11 +7,11 @@ import {
 } from "@tabler/icons-react";
 
 export function FooterComponent() {
+  const t = useTranslations("Footer");
+
   return (
     <Group align="center" h="100%" justify="space-between">
-      <Text size="sm">
-        © 2025 Yoga con Noelia. Todos los derechos reservados.
-      </Text>
+      <Text size="sm">{t("copyright")}</Text>
       <Group gap="xs" justify="flex-end" wrap="nowrap">
         <ActionIcon size="lg" variant="subtle">
           <IconBrandInstagram
