@@ -10,27 +10,10 @@ export function HeroSection() {
       style={{ marginTop: 80, marginBottom: 80 }}
     >
       <Stack style={{ maxWidth: 500 }}>
-        <Title order={1}>Descubre la paz interior con Yoga</Title>
+        <Title order={1}>Yoga con Noelia</Title>
         <Text mt="xl" size="xl">
-          Bienvenido a Yoga con Noelia, donde la tranquilidad se encuentra con
-          la fortaleza. Únete a nuestras clases y comienza tu viaje hacia el
-          bienestar.
+          Yoga para todos
         </Text>
-        <Group mt="xl">
-          <Button
-            gradient={{
-              from: "var(--mantine-primary-color-3)",
-              to: "var(--mantine-primary-color-7)",
-            }}
-            size="lg"
-            variant="gradient"
-          >
-            Reserva tu clase
-          </Button>
-          <Button size="lg" variant="outline">
-            Conoce más
-          </Button>
-        </Group>
       </Stack>
       <Image
         alt="Yoga pose"

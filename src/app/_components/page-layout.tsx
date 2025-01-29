@@ -28,14 +28,16 @@ export default async function PageLayout({ children }: Props) {
       }}
       padding="md"
     >
-      <AppShellHeader bg="var(--mantine-primary-color-1)">
-        <Container fluid h="100%">
+      <AppShellHeader>
+        <Container h="100%" size="lg">
           <HeaderComponent />
         </Container>
       </AppShellHeader>
-      <AppShellMain>{children}</AppShellMain>
-      <AppShellFooter bg="var(--mantine-primary-color-1)">
-        <Container fluid h="100%">
+      <AppShellMain>
+        <Container size="lg">{children}</Container>
+      </AppShellMain>
+      <AppShellFooter>
+        <Container h="100%" size="lg">
           <FooterComponent />
         </Container>
       </AppShellFooter>

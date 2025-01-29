@@ -1,10 +1,13 @@
 "use client";
 
+import NextImage from "next/image";
 import { useTranslations } from "next-intl";
-import { Burger, Button, Drawer, Group, Stack, Title } from "@mantine/core";
+import { Burger, Button, Drawer, Group, Image, Stack } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
 import { Link } from "@/i18n/routing";
+
+import logo from "../../public/logo.png";
 
 export function HeaderComponent() {
   const [drawerOpened, { close: closeDrawer, toggle: toggleDrawer }] =
@@ -14,8 +17,13 @@ export function HeaderComponent() {
   return (
     <>
       <Group align="center" h="100%" justify="space-between">
-        <Title order={1}>{t("title")}</Title>
-
+        <Image
+          alt={t("title")}
+          component={NextImage}
+          h="100%"
+          p="calc(var(--mantine-spacing-xs) / 3)"
+          src={logo}
+        />
         <Group visibleFrom="sm">
           <Link href="/sobre-mi" passHref>
             <Button variant="subtle">{t("about")}</Button>
@@ -27,7 +35,6 @@ export function HeaderComponent() {
             <Button variant="subtle">{t("contact")}</Button>
           </Link>
         </Group>
-
         <Burger hiddenFrom="sm" opened={drawerOpened} onClick={toggleDrawer} />
       </Group>
 
