@@ -1,4 +1,5 @@
-import createNextIntlPlugin from "next-intl/plugin";
+/* eslint-disable @typescript-eslint/no-require-imports */
+const createNextIntlPlugin = require("next-intl/plugin");
 
 const withNextIntl = createNextIntlPlugin();
 
@@ -15,4 +16,4 @@ const nextConfig = {
   },
 };
 
-export default withNextIntl(nextConfig);
+module.exports = withNextIntl(nextConfig);
