@@ -1,4 +1,5 @@
-import { Button, Flex, Group, Image, Stack, Text, Title } from "@mantine/core";
+import NextImage from "next/image";
+import { Flex, Image, Stack, Text, Title } from "@mantine/core";
 
 export function HeroSection() {
   return (
@@ -17,8 +18,12 @@ export function HeroSection() {
       </Stack>
       <Image
         alt="Yoga pose"
-        src="/placeholder.svg?height=400&width=400"
-        style={{ maxWidth: "100%", height: "auto" }}
+        component={NextImage}
+        fallbackSrc="https://placehold.co/600x400?text=Yoga image"
+        height="400"
+        radius="md"
+        src={null}
+        width="600"
       />
     </Flex>
   );

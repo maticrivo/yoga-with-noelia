@@ -33,7 +33,7 @@ const config = [
         },
       ],
 
-      "react/jsx-no-literals": "warn",
+      // "react/jsx-no-literals": "warn",
       "react/jsx-sort-props": [
         "error",
         {
