@@ -7,8 +7,8 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   output: "export",
   trailingSlash: true,
-  basePath: "/",
-  assetPrefix: "/",
+  basePath: "",
+  assetPrefix: "",
   // basePath: `/${process.env.REPOSITORY_NAME}`,
   // assetPrefix: `/${process.env.REPOSITORY_NAME}`,
   images: {
