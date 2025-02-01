@@ -84,7 +84,6 @@ export default async function LocaleLayout({ children, params }: Props) {
               defaultColorScheme="light"
               theme={createTheme({
                 primaryColor: "grape",
-                // fontFamily: inter.style.fontFamily,
                 headings: {
                   fontFamily: "Alta",
                   fontWeight: "normal",

@@ -14,6 +14,28 @@ export function HeaderComponent() {
     useDisclosure(false);
   const t = useTranslations("Header");
 
+  function renderLinks() {
+    return (
+      <>
+        <Link href="/sobre-mi" passHref>
+          <Button color="var(--mantine-color-text)" variant="subtle">
+            {t("about")}
+          </Button>
+        </Link>
+        <Link href="/horario" passHref>
+          <Button color="var(--mantine-color-text)" variant="subtle">
+            {t("classes")}
+          </Button>
+        </Link>
+        <Link href="/contacto" passHref>
+          <Button color="var(--mantine-color-text)" variant="subtle">
+            {t("contact")}
+          </Button>
+        </Link>
+      </>
+    );
+  }
+
   return (
     <>
       <Group align="center" h="100%" justify="space-between">
@@ -24,17 +46,7 @@ export function HeaderComponent() {
           p="calc(var(--mantine-spacing-xs) / 3)"
           src={logo}
         />
-        <Group visibleFrom="sm">
-          <Link href="/sobre-mi" passHref>
-            <Button variant="subtle">{t("about")}</Button>
-          </Link>
-          <Link href="/horario" passHref>
-            <Button variant="subtle">{t("classes")}</Button>
-          </Link>
-          <Link href="/contacto" passHref>
-            <Button variant="subtle">{t("contact")}</Button>
-          </Link>
-        </Group>
+        <Group visibleFrom="sm">{renderLinks()}</Group>
         <Burger hiddenFrom="sm" opened={drawerOpened} onClick={toggleDrawer} />
       </Group>
 
@@ -43,27 +55,10 @@ export function HeaderComponent() {
         opened={drawerOpened}
         padding="md"
         size="100%"
-        title="Navegación"
         zIndex={1000000}
         onClose={closeDrawer}
       >
-        <Stack>
-          <Link href="/sobre-mi" passHref>
-            <Button fullWidth variant="subtle" onClick={closeDrawer}>
-              {t("about")}
-            </Button>
-          </Link>
-          <Link href="/horario" passHref>
-            <Button fullWidth variant="subtle" onClick={closeDrawer}>
-              {t("classes")}
-            </Button>
-          </Link>
-          <Link href="/contacto" passHref>
-            <Button fullWidth variant="subtle" onClick={closeDrawer}>
-              {t("contact")}
-            </Button>
-          </Link>
-        </Stack>
+        <Stack align="center">{renderLinks()}</Stack>
       </Drawer>
     </>
   );

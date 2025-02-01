@@ -1,11 +1,12 @@
 import { setRequestLocale } from "next-intl/server";
-import { AppShellSection, Stack } from "@mantine/core";
+import { AppShellSection, Divider, Stack } from "@mantine/core";
 
 import { Locale } from "@/i18n/routing";
 
 import { AdultYogaSection } from "../_components/adult-yoga";
 import { HeroSection } from "../_components/hero";
 import { KidYogaSection } from "../_components/kid-yoga";
+import LotusIcon from "../_components/lotus-icon";
 import PageLayout from "../_components/page-layout";
 
 type Props = {
@@ -23,9 +24,19 @@ export default async function HomePage({ params }: Props) {
         <AppShellSection component="section">
           <HeroSection />
         </AppShellSection>
+        <Divider
+          label={<LotusIcon c="dimmed" fill size="md" strokeWidth={0} />}
+          labelPosition="center"
+          my="xl"
+        />
         <AppShellSection component="section">
           <AdultYogaSection />
         </AppShellSection>
+        <Divider
+          label={<LotusIcon c="dimmed" fill size="md" strokeWidth={0} />}
+          labelPosition="center"
+          my="xl"
+        />
         <AppShellSection component="section">
           <KidYogaSection />
         </AppShellSection>
