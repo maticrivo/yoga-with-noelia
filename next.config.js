@@ -7,10 +7,10 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   output: "export",
   trailingSlash: true,
-  // basePath: "/yoga-with-noelia",
-  // assetPrefix: "/yoga-with-noelia",
-  basePath: `/${process.env.REPOSITORY_NAME}`,
-  assetPrefix: `/${process.env.REPOSITORY_NAME}`,
+  basePath: "/",
+  assetPrefix: "/",
+  // basePath: `/${process.env.REPOSITORY_NAME}`,
+  // assetPrefix: `/${process.env.REPOSITORY_NAME}`,
   images: {
     unoptimized: true,
   },
