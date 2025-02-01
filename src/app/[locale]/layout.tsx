@@ -83,7 +83,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             <MantineProvider
               defaultColorScheme="light"
               theme={createTheme({
-                primaryColor: "teal",
+                primaryColor: "grape",
                 // fontFamily: inter.style.fontFamily,
                 headings: {
                   fontFamily: "Alta",

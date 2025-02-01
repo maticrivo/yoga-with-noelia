@@ -14,13 +14,13 @@ export function KidYogaSection() {
         Yoga para niños
       </Title>
       <SimpleGrid cols={2}>
-        <Card bg="red.1" shadow="xs">
+        <Card bg="blue.2" shadow="xs">
           <CardSection p="lg" ta="center">
             <Title order={2}>Metodología KAY</Title>
           </CardSection>
           <Text>...</Text>
         </Card>
-        <Card bg="indigo.1" shadow="xs">
+        <Card bg="yellow.2" shadow="xs">
           <CardSection p="lg" ta="center">
             <Title order={2}>KAY - Aprendizaje segundo idioma</Title>
           </CardSection>
