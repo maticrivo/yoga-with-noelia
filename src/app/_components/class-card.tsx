@@ -1,5 +1,9 @@
+"use client";
+
 import { useMemo } from "react";
 import { Anchor, Card, CardProps, Stack, Text, Title } from "@mantine/core";
+
+import { Link } from "@/i18n/routing";
 
 import LotusIcon from "./lotus-icon";
 
@@ -52,10 +56,10 @@ export default function ClassCard({
             />
             <Anchor
               c="#002441"
-              href="https://www.instagram.com/yoga_with_noelia/"
+              component={Link}
+              href="#contact"
               size="sm"
-              target="_blank"
-              underline="hover"
+              underline="always"
             >
               Reserva tu lugar y comienza la práctica.
             </Anchor>

@@ -94,7 +94,7 @@ export function HeaderComponent() {
   return (
     <>
       <Group align="center" gap="xs" h="100%" justify="space-between">
-        <Anchor href="#adult-yoga" underline="never">
+        <Anchor component={Link} href="#adult-yoga" underline="never">
           <Group align="center" gap="sm" h="100%">
             <YogaLogo
               c="#002441"
