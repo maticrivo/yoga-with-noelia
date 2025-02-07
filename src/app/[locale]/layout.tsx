@@ -12,6 +12,7 @@ import {
   createTheme,
   DirectionProvider,
   MantineProvider,
+  TextInput,
 } from "@mantine/core";
 import { getLangDir } from "rtl-detect";
 
@@ -97,6 +98,18 @@ export default async function LocaleLayout({ children, params }: Props) {
                   Text: {
                     defaultProps: {
                       fw: "lighter",
+                    },
+                  },
+                  TextInput: {
+                    defaultProps: {
+                      fw: "lighter",
+                    },
+                  },
+                  InputWrapper: {
+                    styles: {
+                      label: {
+                        fontWeight: "lighter",
+                      },
                     },
                   },
                 },

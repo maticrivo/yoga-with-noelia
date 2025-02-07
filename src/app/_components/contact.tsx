@@ -1,13 +1,19 @@
 "use client";
 
 import {
+  ActionIcon,
+  Anchor,
   Button,
+  Center,
   Container,
+  Group,
   Stack,
   Textarea,
   TextInput,
+  ThemeIcon,
   Title,
 } from "@mantine/core";
+import { IconBrandInstagram } from "@tabler/icons-react";
 
 export function ContactUsSection() {
   return (
@@ -38,6 +44,9 @@ export function ContactUsSection() {
               required
             />
             <Button
+              c="black"
+              color="gray.2"
+              ff="heading"
               size="lg"
               type="submit"
               // variant="gradient"
@@ -46,6 +55,21 @@ export function ContactUsSection() {
             </Button>
           </Stack>
         </form>
+        <Center>
+          <Anchor
+            c="black"
+            href="https://instagram.com/yogawithnoelia"
+            target="_blank"
+            underline="hover"
+          >
+            <Center component="span" inline>
+              <ThemeIcon c="black" variant="transparent">
+                <IconBrandInstagram strokeWidth={0.5} />
+              </ThemeIcon>{" "}
+              Follow me on Instagram
+            </Center>
+          </Anchor>
+        </Center>
       </Stack>
     </Container>
   );
