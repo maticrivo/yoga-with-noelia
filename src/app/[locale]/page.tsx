@@ -21,7 +21,7 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <PageLayout id="adult-yoga">
+    <PageLayout>
       <Stack gap="xl">
         {/* <AppShellSection component="section">
           <HeroSection />
