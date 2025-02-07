@@ -3,11 +3,13 @@ import { AppShellSection, Divider, Stack } from "@mantine/core";
 
 import { Locale } from "@/i18n/routing";
 
+import { AboutSection } from "../_components/about";
 import { AdultYogaSection } from "../_components/adult-yoga";
-import { HeroSection } from "../_components/hero";
+import { ContactUsSection } from "../_components/contact";
 import { KidYogaSection } from "../_components/kid-yoga";
 import LotusIcon from "../_components/lotus-icon";
 import PageLayout from "../_components/page-layout";
+import { SeminariosSection } from "../_components/seminarios";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -21,14 +23,14 @@ export default async function HomePage({ params }: Props) {
   return (
     <PageLayout>
       <Stack gap="xl">
-        <AppShellSection component="section">
+        {/* <AppShellSection component="section">
           <HeroSection />
         </AppShellSection>
         <Divider
           label={<LotusIcon c="dimmed" fill size="md" strokeWidth={0} />}
           labelPosition="center"
           my="xl"
-        />
+        /> */}
         <AppShellSection component="section">
           <AdultYogaSection />
         </AppShellSection>
@@ -39,6 +41,30 @@ export default async function HomePage({ params }: Props) {
         />
         <AppShellSection component="section">
           <KidYogaSection />
+        </AppShellSection>
+        <Divider
+          label={<LotusIcon c="dimmed" fill size="md" strokeWidth={0} />}
+          labelPosition="center"
+          my="xl"
+        />
+        <AppShellSection component="section">
+          <SeminariosSection />
+        </AppShellSection>
+        <Divider
+          label={<LotusIcon c="dimmed" fill size="md" strokeWidth={0} />}
+          labelPosition="center"
+          my="xl"
+        />
+        <AppShellSection component="section">
+          <AboutSection />
+        </AppShellSection>
+        <Divider
+          label={<LotusIcon c="dimmed" fill size="md" strokeWidth={0} />}
+          labelPosition="center"
+          my="xl"
+        />
+        <AppShellSection component="section">
+          <ContactUsSection />
         </AppShellSection>
       </Stack>
     </PageLayout>

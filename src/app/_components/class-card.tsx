@@ -4,7 +4,7 @@ import LotusIcon from "./lotus-icon";
 
 interface ClassCardProps extends CardProps {
   description: string;
-  title: string;
+  title?: string;
 }
 
 export default function ClassCard({
@@ -15,10 +15,14 @@ export default function ClassCard({
   return (
     <Card bg="gray.2" padding="xl" shadow="xs" {...props}>
       <Stack align="center" gap="md" h="100%">
-        <Title order={2} ta="center">
-          {title}
-        </Title>
-        <Text flex={1}>{description}</Text>
+        {title ? (
+          <Title order={3} ta="center">
+            {title}
+          </Title>
+        ) : null}
+        <Text flex={1} ta="justify">
+          {description}
+        </Text>
         <LotusIcon
           c="inherit"
           size="calc(var(--ti-size-xl) * 2)"

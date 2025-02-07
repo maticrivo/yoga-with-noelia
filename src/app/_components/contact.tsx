@@ -13,8 +13,8 @@ export function ContactUsSection() {
   return (
     <Container size="xs">
       <Stack>
-        <Title mb="xl" order={2} ta="center">
-          Contáctanos
+        <Title order={2} ta="center">
+          Contacto
         </Title>
         <form onSubmit={(e) => e.preventDefault()}>
           <Stack>
@@ -25,6 +25,12 @@ export function ContactUsSection() {
               required
               type="email"
             />
+            <TextInput
+              label="Telefono"
+              placeholder="123456789"
+              required
+              type="phone"
+            />
             <Textarea
               label="Mensaje"
               minRows={4}
@@ -32,13 +38,9 @@ export function ContactUsSection() {
               required
             />
             <Button
-              gradient={{
-                from: "var(--mantine-primary-color-3)",
-                to: "var(--mantine-primary-color-7)",
-              }}
               size="lg"
               type="submit"
-              variant="gradient"
+              // variant="gradient"
             >
               Enviar Mensaje
             </Button>

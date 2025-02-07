@@ -3,14 +3,12 @@ import "@mantine/core/styles.css";
 import { ReactNode } from "react";
 import {
   AppShell,
-  AppShellFooter,
   AppShellHeader,
   AppShellMain,
   Container,
   rem,
 } from "@mantine/core";
 
-import { FooterComponent } from "../_components/footer";
 import { HeaderComponent } from "../_components/header";
 
 type Props = {
@@ -20,9 +18,9 @@ type Props = {
 export default async function PageLayout({ children }: Props) {
   return (
     <AppShell
-      footer={{
-        height: rem(40),
-      }}
+      // footer={{
+      //   height: rem(40),
+      // }}
       header={{
         height: rem(80),
       }}
@@ -36,11 +34,11 @@ export default async function PageLayout({ children }: Props) {
       <AppShellMain>
         <Container size="lg">{children}</Container>
       </AppShellMain>
-      <AppShellFooter>
+      {/* <AppShellFooter>
         <Container h="100%" size="lg">
           <FooterComponent />
         </Container>
-      </AppShellFooter>
+      </AppShellFooter> */}
     </AppShell>
   );
 }
