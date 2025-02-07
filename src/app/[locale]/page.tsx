@@ -21,7 +21,7 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <PageLayout>
+    <PageLayout id="adult-yoga">
       <Stack gap="xl">
         {/* <AppShellSection component="section">
           <HeroSection />
@@ -35,6 +35,7 @@ export default async function HomePage({ params }: Props) {
           <AdultYogaSection />
         </AppShellSection>
         <Divider
+          id="kid-yoga"
           label={<LotusIcon c="#002441" fill size="md" strokeWidth={1} />}
           labelPosition="center"
           my="xl"
@@ -43,6 +44,7 @@ export default async function HomePage({ params }: Props) {
           <KidYogaSection />
         </AppShellSection>
         <Divider
+          id="seminars"
           label={<LotusIcon c="#002441" fill size="md" strokeWidth={1} />}
           labelPosition="center"
           my="xl"
@@ -51,6 +53,7 @@ export default async function HomePage({ params }: Props) {
           <SeminariosSection />
         </AppShellSection>
         <Divider
+          id="about"
           label={<LotusIcon c="#002441" fill size="md" strokeWidth={1} />}
           labelPosition="center"
           my="xl"
@@ -59,6 +62,7 @@ export default async function HomePage({ params }: Props) {
           <AboutSection />
         </AppShellSection>
         <Divider
+          id="contact"
           label={<LotusIcon c="#002441" fill size="md" strokeWidth={1} />}
           labelPosition="center"
           my="xl"

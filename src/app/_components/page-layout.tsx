@@ -27,15 +27,15 @@ export default async function PageLayout({ children }: Props) {
       padding="md"
     >
       <AppShellHeader bg="white" style={{ borderBottomColor: "#002441" }}>
-        <Container h="100%" size="lg">
+        <Container h="100%" size="xl">
           <HeaderComponent />
         </Container>
       </AppShellHeader>
       <AppShellMain>
-        <Container size="lg">{children}</Container>
+        <Container size="xl">{children}</Container>
       </AppShellMain>
       {/* <AppShellFooter>
-        <Container h="100%" size="lg">
+        <Container h="100%" size="xl">
           <FooterComponent />
         </Container>
       </AppShellFooter> */}

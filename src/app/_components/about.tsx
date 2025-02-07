@@ -26,7 +26,6 @@ export function AboutSection() {
             "",
           ]}
           hideIcon
-          title=""
         />
       </SimpleGrid>
     </Stack>

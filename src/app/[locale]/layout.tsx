@@ -72,7 +72,12 @@ export default async function LocaleLayout({ children, params }: Props) {
   const direction = getLangDir(locale);
 
   return (
-    <html data-mantine-color-scheme="light" dir={direction} lang={locale}>
+    <html
+      data-mantine-color-scheme="light"
+      dir={direction}
+      lang={locale}
+      style={{ backgroundColor: "#ffffff", scrollBehavior: "smooth" }}
+    >
       <head>
         <ColorSchemeScript />
       </head>

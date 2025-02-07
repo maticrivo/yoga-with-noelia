@@ -6,6 +6,7 @@ import {
   Center,
   Container,
   Stack,
+  Text,
   Textarea,
   TextInput,
   ThemeIcon,
@@ -20,6 +21,12 @@ export function ContactUsSection() {
         <Title order={2} ta="center">
           Contacto
         </Title>
+        <Text>
+          Si quieres inscribirte, recibir más información sobre clases
+          individuales, unirte a un grupo presencial o por Zoom, o conocer más
+          sobre un evento específico, envíame un mensaje con tu número de
+          teléfono y te contactaré a la brevedad.
+        </Text>
         <form onSubmit={(e) => e.preventDefault()}>
           <Stack>
             <TextInput label="Nombre" placeholder="Tu nombre" required />

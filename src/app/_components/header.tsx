@@ -1,14 +1,15 @@
 "use client";
 
+import { useCallback } from "react";
 import { Parisienne } from "next/font/google";
-import NextImage from "next/image";
 import { useTranslations } from "next-intl";
 import {
   Burger,
   Button,
+  ButtonProps,
   Drawer,
   Group,
-  Image,
+  rem,
   Stack,
   Text,
   Title,
@@ -17,7 +18,7 @@ import { useDisclosure } from "@mantine/hooks";
 
 import { Link } from "@/i18n/routing";
 
-import logo from "../../public/logo.png";
+import YogaLogo from "./yoga-logo";
 
 const parisienne = Parisienne({
   subsets: ["latin"],
@@ -30,68 +31,74 @@ export function HeaderComponent() {
     useDisclosure(false);
   const t = useTranslations("Header");
 
-  function renderLinks() {
-    return (
+  const renderLinks = useCallback(
+    (size: ButtonProps["size"] = "compact-xs") => (
       <>
         <Button
           color="var(--mantine-color-text)"
           component={Link}
-          href="/sobre-mi"
-          size="compact-xs"
+          href="#adult-yoga"
+          size={size}
           variant="subtle"
+          onClick={closeDrawer}
         >
           Yoga para Adultos
         </Button>
         <Button
           color="var(--mantine-color-text)"
           component={Link}
-          href="/horario"
-          size="compact-xs"
+          href="#kid-yoga"
+          size={size}
           variant="subtle"
+          onClick={closeDrawer}
         >
           Yoga para Niños
         </Button>
         <Button
           color="var(--mantine-color-text)"
           component={Link}
-          href="/contacto"
-          size="compact-xs"
+          href="#seminars"
+          size={size}
           variant="subtle"
+          onClick={closeDrawer}
         >
           Seminarios
         </Button>
         <Button
           color="var(--mantine-color-text)"
           component={Link}
-          href="/contacto"
-          size="compact-xs"
+          href="#about"
+          size={size}
           variant="subtle"
+          onClick={closeDrawer}
         >
           {t("about")}
         </Button>
         <Button
           color="var(--mantine-color-text)"
           component={Link}
-          href="/contacto"
-          size="compact-xs"
+          href="#contact"
+          size={size}
           variant="subtle"
+          onClick={closeDrawer}
         >
           {t("contact")}
         </Button>
       </>
-    );
-  }
+    ),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
+  );
 
   return (
     <>
-      <Group align="center" h="100%" justify="space-between">
+      <Group align="center" gap="xs" h="100%" justify="space-between">
         <Group align="center" gap="sm" h="100%">
-          <Image
-            alt={t("title")}
-            component={NextImage}
-            h="100%"
-            p="calc(var(--mantine-spacing-xs) / 3)"
-            src={logo}
+          <YogaLogo
+            c="#002441"
+            fill
+            size="calc(var(--mantine-spacing-xl) * 2.3)"
+            strokeWidth={0}
           />
           <Stack align="flex-end" gap={0}>
             <Title order={2}>Yoga con Noelia</Title>
@@ -108,11 +115,18 @@ export function HeaderComponent() {
         hiddenFrom="md"
         opened={drawerOpened}
         padding="md"
+        position="top"
         size="100%"
-        zIndex={1000000}
+        styles={{
+          body: {
+            marginTop: rem(80),
+          },
+        }}
+        withCloseButton={false}
+        zIndex="calc(var(--mantine-z-index-app) / 2)"
         onClose={closeDrawer}
       >
-        <Stack align="center">{renderLinks()}</Stack>
+        <Stack align="center">{renderLinks("lg")}</Stack>
       </Drawer>
     </>
   );
