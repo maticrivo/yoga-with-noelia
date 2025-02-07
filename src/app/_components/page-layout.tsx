@@ -32,7 +32,7 @@ export default async function PageLayout({ children }: Props) {
           <HeaderComponent />
         </Container>
       </AppShellHeader>
-      <AppShellMain>
+      <AppShellMain bg="#bfa6ab">
         <Container size="xl">{children}</Container>
       </AppShellMain>
       {/* <AppShellFooter>

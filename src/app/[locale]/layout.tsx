@@ -76,13 +76,13 @@ export default async function LocaleLayout({ children, params }: Props) {
       data-mantine-color-scheme="light"
       dir={direction}
       lang={locale}
-      style={{ backgroundColor: "#ffffff", scrollBehavior: "smooth" }}
+      style={{ scrollBehavior: "smooth" }}
     >
       <head>
         <ColorSchemeScript />
       </head>
 
-      <body style={{ backgroundColor: "#bfa6ab" }}>
+      <body>
         <NextIntlClientProvider messages={messages}>
           <DirectionProvider initialDirection={direction}>
             <MantineProvider
