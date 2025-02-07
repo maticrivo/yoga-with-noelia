@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import {
   Anchor,
   Button,
@@ -15,37 +16,37 @@ import {
 import { IconBrandInstagram } from "@tabler/icons-react";
 
 export function ContactUsSection() {
+  const t = useTranslations("Contact");
   return (
     <Container size="xs">
       <Stack>
         <Title order={2} ta="center">
-          Contacto
+          {t("title")}
         </Title>
-        <Text>
-          Si quieres inscribirte, recibir más información sobre clases
-          individuales, unirte a un grupo presencial o por Zoom, o conocer más
-          sobre un evento específico, envíame un mensaje con tu número de
-          teléfono y te contactaré a la brevedad.
-        </Text>
+        <Text>{t("description")}</Text>
         <form onSubmit={(e) => e.preventDefault()}>
           <Stack>
-            <TextInput label="Nombre" placeholder="Tu nombre" required />
             <TextInput
-              label="Email"
-              placeholder="tu@email.com"
+              label={t("form.name.label")}
+              placeholder={t("form.name.placeholder")}
+              required
+            />
+            <TextInput
+              label={t("form.email.label")}
+              placeholder={t("form.email.placeholder")}
               required
               type="email"
             />
             <TextInput
-              label="Telefono"
-              placeholder="123456789"
+              label={t("form.phone.label")}
+              placeholder={t("form.phone.placeholder")}
               required
               type="phone"
             />
             <Textarea
-              label="Mensaje"
+              label={t("form.message.label")}
               minRows={4}
-              placeholder="Tu mensaje aquí"
+              placeholder={t("form.message.placeholder")}
               required
             />
             <Button
@@ -56,7 +57,7 @@ export function ContactUsSection() {
               type="submit"
               variant="light"
             >
-              Enviar Mensaje
+              {t("form.send")}
             </Button>
           </Stack>
         </form>
@@ -72,7 +73,7 @@ export function ContactUsSection() {
             <ThemeIcon c="#002441" variant="transparent">
               <IconBrandInstagram strokeWidth={0.5} />
             </ThemeIcon>{" "}
-            Follow me on Instagram
+            {t("follow")}
           </Anchor>
         </Center>
       </Stack>

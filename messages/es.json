@@ -10,5 +10,60 @@
   },
   "Footer": {
     "copyright": "© 2025 Yoga con Noelia. Todos los derechos reservados."
+  },
+  "About": {
+    "title": "Sobre Mí",
+    "messages": {
+      "1": "Practico yoga desde 2016, explorando diferentes metodologías y aprendiendo de diversos maestros. Con el tiempo, esta disciplina me ha brindado una profunda sensación de calma y conexión conmigo misma, una experiencia transformadora que me llevó a profundizar en su estudio y enseñanza.",
+      "2": "Mi objetivo es poder llevar y transmitir la practica de yoga a la mayor cantidad de gente que quiera incursionar en la practica.",
+      "3": "Formación",
+      "4": "2018 - Yoga para Niños | Kidding Around Yoga con Nieke Franken, Iafo.",
+      "5": "2020-2022 - 500 RYT Profesora de Yoga Ashtanga Vinyasa | OMYoga con Shani Sharon, Raanana.",
+      "6": "2022-2023 - Asistente en curso para maestros de yoga | OMYoga.",
+      "7": "2024 - Actualidad - Diplomado en Vinculación Corporal y Movimiento Somático | EastWest Somatics Institute con Ashley Meeder (online, México).",
+      "8": "2020 - Actualidad - Miembro de la Asociación Israelí de Yoga (ISYOGA)."
+    }
+  },
+  "AdultYoga": {
+    "1": {
+      "title": "Vinyasa Ashtanga clásica",
+      "description": "Esta clase está pensada para trabajar el método de yoga Ashtanga Vinyasa, para principiantes. El Ashtanga yoga es una excelente forma de desarrollar fuerza física y flexibilidad. La práctica implica una serie de posturas que trabajan todos los grupos musculares del cuerpo, incluidos el pecho, los brazos, las piernas y los glúteos, todos los movimientos son guiados a través de la respiración."
+    },
+    "2": {
+      "title": "Vinyasa flow",
+      "description": "Vinyasa Yoga es un tipo de yoga dinámica que coordina el movimiento y respiración a lo largo de diferentes  secuencias de posturas (asanas) enlazadas entre sí. Esta clase es ideal para iniciarse en la práctica de yoga."
+    },
+    "3": {
+      "title": "Yoga para tercera edad",
+      "description": "En la clase de yoga para los adultos mayores utilizamos diferentes elementos para adaptar la práctica segun las necesidades de cada participante, los beneficios estudiados mejora la movilidad ayudar a mejorar la rigidez del movimiento permitiendo la amplitud. Ademas relaja y fortalece los músculos, lo que facilita el desplazamiento. Mejora de la respiración."
+    },
+    "4": {
+      "title": "Movimiento Somático",
+      "description": "El yoga somático es una de las variantes que te ayudará a mover tu cuerpo de una manera sumamente consciente, lento  y a la par, tendrás un momento para despejar la mente y sanar tus emociones. Ayuda a nivel cuerpo mente a sentirnos seguros, lo cual es la prioridad número uno para nuestro cerebro. Ayuda a reducir la tensión y trabaja profundamente el Sistema Nerviso Autonomo."
+    }
+  },
+  "Contact": {
+    "title": "Contacto",
+    "description": "Si quieres inscribirte, recibir más información sobre clases individuales, unirte a un grupo presencial o por Zoom, o conocer más sobre un evento específico, envíame un mensaje con tu número de teléfono y te contactaré a la brevedad.",
+    "follow": "Follow me on Instagram",
+    "form": {
+      "name": {
+        "label": "Nombre",
+        "placeholder": "Tu Nombre"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "tu@email.com"
+      },
+      "phone": {
+        "label": "Telefono",
+        "placeholder": "123456789"
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Tu mensaje aquí"
+      },
+      "send": "Enviar Mensaje"
+    }
   }
 }

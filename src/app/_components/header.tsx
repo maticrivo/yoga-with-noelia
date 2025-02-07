@@ -4,6 +4,7 @@ import { useCallback } from "react";
 import { Parisienne } from "next/font/google";
 import { useTranslations } from "next-intl";
 import {
+  Anchor,
   Burger,
   Button,
   ButtonProps,
@@ -93,20 +94,22 @@ export function HeaderComponent() {
   return (
     <>
       <Group align="center" gap="xs" h="100%" justify="space-between">
-        <Group align="center" gap="sm" h="100%">
-          <YogaLogo
-            c="#002441"
-            fill
-            size="calc(var(--mantine-spacing-xl) * 2.3)"
-            strokeWidth={0}
-          />
-          <Stack align="flex-end" gap={0}>
-            <Title order={2}>Yoga con Noelia</Title>
-            <Text className={parisienne.className} fz="xl">
-              Yoga para todos
-            </Text>
-          </Stack>
-        </Group>
+        <Anchor href="#adult-yoga" underline="never">
+          <Group align="center" gap="sm" h="100%">
+            <YogaLogo
+              c="#002441"
+              fill
+              size="calc(var(--mantine-spacing-xl) * 2.3)"
+              strokeWidth={0}
+            />
+            <Stack align="flex-end" gap={0}>
+              <Title order={2}>Yoga con Noelia</Title>
+              <Text className={parisienne.className} fz="xl">
+                Yoga para todos
+              </Text>
+            </Stack>
+          </Group>
+        </Anchor>
         <Group visibleFrom="md">{renderLinks()}</Group>
         <Burger hiddenFrom="md" opened={drawerOpened} onClick={toggleDrawer} />
       </Group>
