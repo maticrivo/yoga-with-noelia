@@ -27,7 +27,7 @@ export default async function HomePage({ params }: Props) {
           <HeroSection />
         </AppShellSection>
         <Divider
-          label={<LotusIcon c="dimmed" fill size="md" strokeWidth={0} />}
+          label={<LotusIcon c="#002441" fill size="md" strokeWidth={1} />}
           labelPosition="center"
           my="xl"
         /> */}
@@ -35,7 +35,7 @@ export default async function HomePage({ params }: Props) {
           <AdultYogaSection />
         </AppShellSection>
         <Divider
-          label={<LotusIcon c="dimmed" fill size="md" strokeWidth={0} />}
+          label={<LotusIcon c="#002441" fill size="md" strokeWidth={1} />}
           labelPosition="center"
           my="xl"
         />
@@ -43,7 +43,7 @@ export default async function HomePage({ params }: Props) {
           <KidYogaSection />
         </AppShellSection>
         <Divider
-          label={<LotusIcon c="dimmed" fill size="md" strokeWidth={0} />}
+          label={<LotusIcon c="#002441" fill size="md" strokeWidth={1} />}
           labelPosition="center"
           my="xl"
         />
@@ -51,7 +51,7 @@ export default async function HomePage({ params }: Props) {
           <SeminariosSection />
         </AppShellSection>
         <Divider
-          label={<LotusIcon c="dimmed" fill size="md" strokeWidth={0} />}
+          label={<LotusIcon c="#002441" fill size="md" strokeWidth={1} />}
           labelPosition="center"
           my="xl"
         />
@@ -59,7 +59,7 @@ export default async function HomePage({ params }: Props) {
           <AboutSection />
         </AppShellSection>
         <Divider
-          label={<LotusIcon c="dimmed" fill size="md" strokeWidth={0} />}
+          label={<LotusIcon c="#002441" fill size="md" strokeWidth={1} />}
           labelPosition="center"
           my="xl"
         />

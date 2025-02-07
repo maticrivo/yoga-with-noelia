@@ -12,7 +12,6 @@ import {
   createTheme,
   DirectionProvider,
   MantineProvider,
-  TextInput,
 } from "@mantine/core";
 import { getLangDir } from "rtl-detect";
 
@@ -78,13 +77,12 @@ export default async function LocaleLayout({ children, params }: Props) {
         <ColorSchemeScript />
       </head>
 
-      <body>
+      <body style={{ backgroundColor: "#bfa6ab" }}>
         <NextIntlClientProvider messages={messages}>
           <DirectionProvider initialDirection={direction}>
             <MantineProvider
               defaultColorScheme="light"
               theme={createTheme({
-                primaryColor: "grape",
                 headings: {
                   fontFamily: "Alta",
                   fontWeight: "normal",
@@ -92,23 +90,43 @@ export default async function LocaleLayout({ children, params }: Props) {
                 components: {
                   Button: {
                     defaultProps: {
+                      c: "#002441",
                       fw: "normal",
+                    },
+                  },
+                  Divider: {
+                    defaultProps: {
+                      color: "#002441",
+                      size: "xs",
                     },
                   },
                   Text: {
                     defaultProps: {
+                      c: "#002441",
                       fw: "lighter",
                     },
                   },
-                  TextInput: {
+                  Title: {
                     defaultProps: {
-                      fw: "lighter",
+                      c: "#002441",
+                    },
+                  },
+                  Input: {
+                    styles: {
+                      input: {
+                        color: "#002441",
+                        fontWeight: "lighter",
+                      },
                     },
                   },
                   InputWrapper: {
                     styles: {
                       label: {
+                        color: "#002441",
                         fontWeight: "lighter",
+                      },
+                      required: {
+                        color: "#002441",
                       },
                     },
                   },

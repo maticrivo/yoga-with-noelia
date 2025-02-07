@@ -5,7 +5,7 @@ import ClassCard from "./class-card";
 export function AdultYogaSection() {
   return (
     <Stack>
-      <Title order={2} ta="center">
+      <Title c="#002441" order={2} ta="center">
         Yoga para adultos
       </Title>
       <SimpleGrid cols={{ base: 1, md: 2 }}>

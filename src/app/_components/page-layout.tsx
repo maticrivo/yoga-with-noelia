@@ -26,7 +26,7 @@ export default async function PageLayout({ children }: Props) {
       }}
       padding="md"
     >
-      <AppShellHeader>
+      <AppShellHeader bg="white" style={{ borderBottomColor: "#002441" }}>
         <Container h="100%" size="lg">
           <HeaderComponent />
         </Container>

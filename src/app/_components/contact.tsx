@@ -1,12 +1,10 @@
 "use client";
 
 import {
-  ActionIcon,
   Anchor,
   Button,
   Center,
   Container,
-  Group,
   Stack,
   Textarea,
   TextInput,
@@ -44,12 +42,12 @@ export function ContactUsSection() {
               required
             />
             <Button
-              c="black"
-              color="gray.2"
+              c="#002441"
+              color="white"
               ff="heading"
               size="lg"
               type="submit"
-              // variant="gradient"
+              variant="light"
             >
               Enviar Mensaje
             </Button>
@@ -57,17 +55,17 @@ export function ContactUsSection() {
         </form>
         <Center>
           <Anchor
-            c="black"
-            href="https://instagram.com/yogawithnoelia"
+            c="#002441"
+            display="flex"
+            href="https://www.instagram.com/yoga_with_noelia/"
+            style={{ alignItems: "center" }}
             target="_blank"
             underline="hover"
           >
-            <Center component="span" inline>
-              <ThemeIcon c="black" variant="transparent">
-                <IconBrandInstagram strokeWidth={0.5} />
-              </ThemeIcon>{" "}
-              Follow me on Instagram
-            </Center>
+            <ThemeIcon c="#002441" variant="transparent">
+              <IconBrandInstagram strokeWidth={0.5} />
+            </ThemeIcon>{" "}
+            Follow me on Instagram
           </Anchor>
         </Center>
       </Stack>

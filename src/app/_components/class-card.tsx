@@ -1,15 +1,5 @@
 import { useMemo } from "react";
-import {
-  ActionIcon,
-  Anchor,
-  Card,
-  CardProps,
-  Group,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
-import { IconBrandInstagram } from "@tabler/icons-react";
+import { Anchor, Card, CardProps, Stack, Text, Title } from "@mantine/core";
 
 import LotusIcon from "./lotus-icon";
 
@@ -32,7 +22,14 @@ export default function ClassCard({
     return [description];
   }, [description]);
   return (
-    <Card bg="gray.2" padding="xl" shadow="xs" {...props}>
+    <Card
+      bg="transparent"
+      padding="xl"
+      shadow="xs"
+      style={{ borderColor: "#002441" }}
+      withBorder
+      {...props}
+    >
       <Stack align="center" gap="md" h="100%">
         {title ? (
           <Title order={3} ta="center">
@@ -47,11 +44,22 @@ export default function ClassCard({
           ))}
         </Stack>
         {!hideIcon ? (
-          <LotusIcon
-            c="inherit"
-            size="calc(var(--ti-size-xl) * 2)"
-            strokeWidth={2}
-          />
+          <>
+            <LotusIcon
+              c="#002441"
+              size="calc(var(--ti-size-xl) * 2)"
+              strokeWidth={1.5}
+            />
+            <Anchor
+              c="#002441"
+              href="https://www.instagram.com/yoga_with_noelia/"
+              size="sm"
+              target="_blank"
+              underline="hover"
+            >
+              Reserva tu lugar y comienza la práctica.
+            </Anchor>
+          </>
         ) : null}
       </Stack>
     </Card>
