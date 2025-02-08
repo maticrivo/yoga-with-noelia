@@ -4,9 +4,14 @@
   },
   "Header": {
     "title": "יוגה עם נואליה",
-    "about": "עליי",
-    "classes": "שיעורים",
-    "contact": "צור קשר"
+    "slogan": "יוגה לכולם",
+    "links": {
+      "adult": "יוגה למבוגרים",
+      "kid": "יוגה לילדים",
+      "seminars": "השתלמויות",
+      "about": "עליי",
+      "contact": "צור קשר"
+    }
   },
   "Footer": {
     "copyright": "© 2025 יוגה עם נואליה. כל הזכויות שמורות."
@@ -24,7 +29,35 @@
       "8": "2020 - Actualidad - Miembro de la Asociación Israelí de Yoga (ISYOGA)."
     }
   },
+  "Contact": {
+    "title": "צור קשר",
+    "description": "Si quieres inscribirte, recibir más información sobre clases individuales, unirte a un grupo presencial o por Zoom, o conocer más sobre un evento específico, envíame un mensaje con tu número de teléfono y te contactaré a la brevedad.",
+    "follow": "עקבו אחרי",
+    "form": {
+      "name": {
+        "label": "שם",
+        "placeholder": "שם"
+      },
+      "email": {
+        "label": "אימייל",
+        "placeholder": "you@email.com"
+      },
+      "phone": {
+        "label": "טלפון",
+        "placeholder": "055-1234567"
+      },
+      "message": {
+        "label": "הודעה",
+        "placeholder": "השאר פרטים כאן"
+      },
+      "send": "שלח הודעה"
+    }
+  },
+  "ClassCard": {
+    "reserve": "Reserva tu lugar y comienza la práctica."
+  },
   "AdultYoga": {
+    "title": "יוגה למבוגרים",
     "1": {
       "title": "Vinyasa Ashtanga clásica",
       "description": "Esta clase está pensada para trabajar el método de yoga Ashtanga Vinyasa, para principiantes. El Ashtanga yoga es una excelente forma de desarrollar fuerza física y flexibilidad. La práctica implica una serie de posturas que trabajan todos los grupos musculares del cuerpo, incluidos el pecho, los brazos, las piernas y los glúteos, todos los movimientos son guiados a través de la respiración."
@@ -42,28 +75,22 @@
       "description": "El yoga somático es una de las variantes que te ayudará a mover tu cuerpo de una manera sumamente consciente, lento  y a la par, tendrás un momento para despejar la mente y sanar tus emociones. Ayuda a nivel cuerpo mente a sentirnos seguros, lo cual es la prioridad número uno para nuestro cerebro. Ayuda a reducir la tensión y trabaja profundamente el Sistema Nerviso Autonomo."
     }
   },
-  "Contact": {
-    "title": "צור קשר",
-    "description": "Si quieres inscribirte, recibir más información sobre clases individuales, unirte a un grupo presencial o por Zoom, o conocer más sobre un evento específico, envíame un mensaje con tu número de teléfono y te contactaré a la brevedad.",
-    "follow": "עקבו אחרי",
-    "form": {
-      "name": {
-        "label": "Nombre",
-        "placeholder": "Tu Nombre"
-      },
-      "email": {
-        "label": "Email",
-        "placeholder": "tu@email.com"
-      },
-      "phone": {
-        "label": "Telefono",
-        "placeholder": "123456789"
-      },
-      "message": {
-        "label": "Mensaje",
-        "placeholder": "Tu mensaje aquí"
-      },
-      "send": "Enviar Mensaje"
+  "KidYoga": {
+    "title": "יוגה לילדים",
+    "1": {
+      "title": "Metodología KAY",
+      "description": "Se basa en tres pilares fundamentales: Música: Las clases incorporan canciones que acompañan los movimientos, ayudando a los niños a disfrutar de la práctica y a mejorar su concentración. Movimiento: El yoga se presenta demanera lúdica y creativa, usando juegos y ejercicios que permiten a los niños explorar su cuerpo y emociones. Curiosidad y Mindfulness: Se fomenta el desarrollo de la conciencia emocional,reconociendo y gestionando las emociones a través de prácticas de mindfulness adaptadas a su edad"
+    },
+    "2": {
+      "title": "KAY - Aprendizaje segundo idioma",
+      "description": "Las clases se pueden estructurar para realizarlas en inglés, hebreo o español de forma muy lúdica y didáctica los niños incorporan una herramienta adicional de enseñanza a través del yoga, lo que potencia tanto el desarrollo corporal como cognitivo."
+    }
+  },
+  "Seminars": {
+    "title": "השתלמויות וכנסים מיוחדים",
+    "1": {
+      "title": "",
+      "description": "Los seminarios son experiencias enriquecedoras diseñadas para profundizar un tema en particular en la práctica y filosofía del yoga. Exploramos posturas, técnicas de respiración, meditación y movimiento somatico. Estos encuentros son ideales tanto para principiantes como para practicantes avanzados que desean ampliar su conocimiento y profundizar su práctica para conectar más profundamente con su cuerpo y mente."
     }
   }
 }

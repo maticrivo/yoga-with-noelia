@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Parisienne } from "next/font/google";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
@@ -17,20 +18,35 @@ import { getLangDir } from "rtl-detect";
 
 import { Locale, routing } from "@/i18n/routing";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Alta = localFont({
   src: [
     {
       path: "../../public/Alta_regular.woff2",
       style: "normal",
-      weight: "normal",
+      weight: "400",
     },
     {
       path: "../../public/Alta_light.woff2",
       style: "normal",
-      weight: "300",
+      weight: "200",
     },
   ],
+});
+
+const GveretLevin = localFont({
+  src: [
+    {
+      path: "../../public/GveretLevinAlefAlefAlef-Regular.woff2",
+      style: "normal",
+      weight: "400",
+    },
+  ],
+});
+
+const parisienne = Parisienne({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "400",
 });
 
 type Props = {
@@ -88,8 +104,20 @@ export default async function LocaleLayout({ children, params }: Props) {
             <MantineProvider
               defaultColorScheme="light"
               theme={createTheme({
+                other: {
+                  sloganFont:
+                    locale === "he"
+                      ? {
+                          fontFamily: GveretLevin.style.fontFamily,
+                          fontWeight: "normal",
+                        }
+                      : {
+                          fontFamily: parisienne.style.fontFamily,
+                          fontWeight: "normal",
+                        },
+                },
                 headings: {
-                  fontFamily: "Alta",
+                  fontFamily: Alta.style.fontFamily,
                   fontWeight: "normal",
                 },
                 components: {

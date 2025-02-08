@@ -24,7 +24,6 @@ export default async function PageLayout({ children }: Props) {
       header={{
         height: rem(80),
       }}
-      id="adult-yoga"
       padding="md"
     >
       <AppShellHeader bg="white" style={{ borderBottomColor: "#002441" }}>

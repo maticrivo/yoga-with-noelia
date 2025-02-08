@@ -10,7 +10,7 @@ export function AdultYogaSection() {
   return (
     <Stack>
       <Title c="#002441" order={2} ta="center">
-        Yoga para adultos
+        {t("title")}
       </Title>
       <SimpleGrid cols={{ base: 1, md: 2 }}>
         {keys.map((key) => (

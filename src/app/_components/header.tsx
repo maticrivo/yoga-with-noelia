@@ -14,6 +14,7 @@ import {
   Stack,
   Text,
   Title,
+  useMantineTheme,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
@@ -21,16 +22,11 @@ import { Link } from "@/i18n/routing";
 
 import YogaLogo from "./yoga-logo";
 
-const parisienne = Parisienne({
-  subsets: ["latin"],
-  display: "swap",
-  weight: "400",
-});
-
 export function HeaderComponent() {
   const [drawerOpened, { close: closeDrawer, toggle: toggleDrawer }] =
     useDisclosure(false);
   const t = useTranslations("Header");
+  const theme = useMantineTheme();
 
   const renderLinks = useCallback(
     (size: ButtonProps["size"] = "compact-xs") => (
@@ -43,7 +39,7 @@ export function HeaderComponent() {
           variant="subtle"
           onClick={closeDrawer}
         >
-          Yoga para Adultos
+          {t("links.adult")}
         </Button>
         <Button
           color="var(--mantine-color-text)"
@@ -53,7 +49,7 @@ export function HeaderComponent() {
           variant="subtle"
           onClick={closeDrawer}
         >
-          Yoga para Niños
+          {t("links.kid")}
         </Button>
         <Button
           color="var(--mantine-color-text)"
@@ -63,7 +59,7 @@ export function HeaderComponent() {
           variant="subtle"
           onClick={closeDrawer}
         >
-          Seminarios
+          {t("links.seminars")}
         </Button>
         <Button
           color="var(--mantine-color-text)"
@@ -73,7 +69,7 @@ export function HeaderComponent() {
           variant="subtle"
           onClick={closeDrawer}
         >
-          {t("about")}
+          {t("links.about")}
         </Button>
         <Button
           color="var(--mantine-color-text)"
@@ -83,7 +79,7 @@ export function HeaderComponent() {
           variant="subtle"
           onClick={closeDrawer}
         >
-          {t("contact")}
+          {t("links.contact")}
         </Button>
       </>
     ),
@@ -103,9 +99,15 @@ export function HeaderComponent() {
               strokeWidth={0}
             />
             <Stack align="flex-end" gap={0}>
-              <Title order={2}>Yoga con Noelia</Title>
-              <Text className={parisienne.className} fz="xl">
-                Yoga para todos
+              <Title fz={28} order={1}>
+                {t("title")}
+              </Title>
+              <Text
+                ff={theme.other.sloganFont.fontFamily}
+                fw={theme.other.sloganFont.fontWeight}
+                fz="xl"
+              >
+                {t("slogan")}
               </Text>
             </Stack>
           </Group>
