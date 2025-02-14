@@ -104,6 +104,20 @@ export default async function LocaleLayout({ children, params }: Props) {
             <MantineProvider
               defaultColorScheme="light"
               theme={createTheme({
+                colors: {
+                  "dark-blue": [
+                    "#002441",
+                    "#002441",
+                    "#002441",
+                    "#002441",
+                    "#002441",
+                    "#002441",
+                    "#002441",
+                    "#002441",
+                    "#002441",
+                    "#002441",
+                  ],
+                },
                 other: {
                   sloganFont:
                     locale === "he"
@@ -123,31 +137,32 @@ export default async function LocaleLayout({ children, params }: Props) {
                 components: {
                   Button: {
                     defaultProps: {
-                      c: "#002441",
+                      c: "dark-blue",
+                      color: "dark-blue",
                       fw: "normal",
                     },
                   },
                   Divider: {
                     defaultProps: {
-                      color: "#002441",
+                      color: "dark-blue",
                       size: "xs",
                     },
                   },
                   Text: {
                     defaultProps: {
-                      c: "#002441",
+                      c: "dark-blue",
                       fw: "lighter",
                     },
                   },
                   Title: {
                     defaultProps: {
-                      c: "#002441",
+                      c: "dark-blue",
                     },
                   },
                   Input: {
                     styles: {
                       input: {
-                        color: "#002441",
+                        color: "dark-blue",
                         fontWeight: "lighter",
                       },
                     },
@@ -155,11 +170,11 @@ export default async function LocaleLayout({ children, params }: Props) {
                   InputWrapper: {
                     styles: {
                       label: {
-                        color: "#002441",
+                        color: "dark-blue",
                         fontWeight: "lighter",
                       },
                       required: {
-                        color: "#002441",
+                        color: "dark-blue",
                       },
                     },
                   },

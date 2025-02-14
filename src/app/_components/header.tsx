@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback } from "react";
-import { Parisienne } from "next/font/google";
+import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import {
   Anchor,
@@ -10,6 +10,7 @@ import {
   ButtonProps,
   Drawer,
   Group,
+  Menu,
   rem,
   Stack,
   Text,
@@ -18,7 +19,13 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
-import { Link } from "@/i18n/routing";
+import {
+  Link,
+  Locale,
+  localeMapping,
+  routing,
+  usePathname,
+} from "@/i18n/routing";
 
 import YogaLogo from "./yoga-logo";
 
@@ -27,6 +34,9 @@ export function HeaderComponent() {
     useDisclosure(false);
   const t = useTranslations("Header");
   const theme = useMantineTheme();
+  const pathname = usePathname();
+  const params = useParams();
+  const locale = (params?.locale || routing.defaultLocale) as Locale;
 
   const renderLinks = useCallback(
     (size: ButtonProps["size"] = "compact-xs") => (
@@ -93,7 +103,7 @@ export function HeaderComponent() {
         <Anchor component={Link} href="#adult-yoga" underline="never">
           <Group align="center" gap="sm" h="100%">
             <YogaLogo
-              c="#002441"
+              c="dark-blue"
               fill
               size="calc(var(--mantine-spacing-xl) * 2.3)"
               strokeWidth={0}
@@ -112,8 +122,34 @@ export function HeaderComponent() {
             </Stack>
           </Group>
         </Anchor>
-        <Group visibleFrom="md">{renderLinks()}</Group>
-        <Burger hiddenFrom="md" opened={drawerOpened} onClick={toggleDrawer} />
+        <Group>
+          <Group visibleFrom="md">{renderLinks()}</Group>
+          <Menu arrowSize={10} shadow="md" withArrow>
+            <Menu.Target>
+              <Button radius="xl" size="xs" variant="outline">
+                {localeMapping[locale].label}
+              </Button>
+            </Menu.Target>
+
+            <Menu.Dropdown>
+              {routing.locales.map((l) => (
+                <Menu.Item
+                  key={l}
+                  component={Link}
+                  href={{ pathname }}
+                  locale={l}
+                >
+                  {localeMapping[l].title}
+                </Menu.Item>
+              ))}
+            </Menu.Dropdown>
+          </Menu>
+          <Burger
+            hiddenFrom="md"
+            opened={drawerOpened}
+            onClick={toggleDrawer}
+          />
+        </Group>
       </Group>
 
       <Drawer

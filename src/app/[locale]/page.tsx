@@ -30,7 +30,7 @@ export default async function HomePage({ params }: Props) {
           </AppShellSection>
           <Divider
             id="kid-yoga"
-            label={<LotusIcon c="#002441" fill size="md" strokeWidth={1} />}
+            label={<LotusIcon c="dark-blue" fill size="md" strokeWidth={1} />}
             labelPosition="center"
             my="xl"
           />
@@ -39,7 +39,7 @@ export default async function HomePage({ params }: Props) {
           </AppShellSection>
           <Divider
             id="seminars"
-            label={<LotusIcon c="#002441" fill size="md" strokeWidth={1} />}
+            label={<LotusIcon c="dark-blue" fill size="md" strokeWidth={1} />}
             labelPosition="center"
             my="xl"
           />
@@ -48,7 +48,7 @@ export default async function HomePage({ params }: Props) {
           </AppShellSection>
           <Divider
             id="about"
-            label={<LotusIcon c="#002441" fill size="md" strokeWidth={1} />}
+            label={<LotusIcon c="dark-blue" fill size="md" strokeWidth={1} />}
             labelPosition="center"
             my="xl"
           />
@@ -57,7 +57,7 @@ export default async function HomePage({ params }: Props) {
           </AppShellSection>
           <Divider
             id="contact"
-            label={<LotusIcon c="#002441" fill size="md" strokeWidth={1} />}
+            label={<LotusIcon c="dark-blue" fill size="md" strokeWidth={1} />}
             labelPosition="center"
             my="xl"
           />

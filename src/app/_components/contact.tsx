@@ -50,7 +50,7 @@ export function ContactUsSection() {
               required
             />
             <Button
-              c="#002441"
+              c="dark-blue"
               color="white"
               ff="heading"
               size="lg"
@@ -63,14 +63,14 @@ export function ContactUsSection() {
         </form>
         <Center>
           <Anchor
-            c="#002441"
+            c="dark-blue"
             display="flex"
             href="https://www.instagram.com/yoga_with_noelia/"
             style={{ alignItems: "center" }}
             target="_blank"
             underline="hover"
           >
-            <ThemeIcon c="#002441" variant="transparent">
+            <ThemeIcon c="dark-blue" variant="transparent">
               <IconBrandInstagram strokeWidth={0.5} />
             </ThemeIcon>{" "}
             {t("follow")}

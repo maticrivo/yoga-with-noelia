@@ -9,7 +9,7 @@ export function AdultYogaSection() {
 
   return (
     <Stack>
-      <Title c="#002441" order={2} ta="center">
+      <Title c="dark-blue" order={2} ta="center">
         {t("title")}
       </Title>
       <SimpleGrid cols={{ base: 1, md: 2 }}>

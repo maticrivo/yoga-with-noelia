@@ -30,7 +30,7 @@ export default function ClassCard({
       bg="transparent"
       padding="xl"
       shadow="xs"
-      style={{ borderColor: "#002441" }}
+      style={(theme) => ({ borderColor: theme.colors["dark-blue"][0] })}
       withBorder
       {...props}
     >
@@ -50,12 +50,12 @@ export default function ClassCard({
         {!hideIcon ? (
           <>
             <LotusIcon
-              c="#002441"
+              c="dark-blue"
               size="calc(var(--ti-size-xl) * 2)"
               strokeWidth={1.5}
             />
             <Anchor
-              c="#002441"
+              c="dark-blue"
               component={Link}
               href="#contact"
               size="sm"

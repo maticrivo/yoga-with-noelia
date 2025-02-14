@@ -1,6 +1,11 @@
 import { createNavigation } from "next-intl/navigation";
 import { defineRouting } from "next-intl/routing";
 
+export const localeMapping: Record<Locale, { label: string; title: string }> = {
+  es: { label: "ES", title: "Español" },
+  he: { label: "עב", title: "עברית" },
+};
+
 export const routing = defineRouting({
   // A list of all locales that are supported
   locales: ["es", "he"],
