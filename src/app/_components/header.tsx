@@ -8,16 +8,20 @@ import {
   Burger,
   Button,
   ButtonProps,
+  Divider,
   Drawer,
   Group,
   Menu,
+  NavLink,
   rem,
   Stack,
   Text,
+  ThemeIcon,
   Title,
   useMantineTheme,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { IconChevronDown } from "@tabler/icons-react";
 
 import {
   Link,
@@ -122,36 +126,39 @@ export function HeaderComponent() {
             </Stack>
           </Group>
         </Anchor>
-        <Group h="100%">
-          <Group visibleFrom="md">{renderLinks()}</Group>
-          <Stack align="flex-end" gap={0} h="100%" justify="space-evenly">
-            <Burger
-              hiddenFrom="md"
-              opened={drawerOpened}
-              onClick={toggleDrawer}
-            />
-            <Menu arrowSize={10} shadow="md" withArrow>
-              <Menu.Target>
-                <Button radius="xl" size="compact-xs" variant="outline">
-                  {localeMapping[locale].label}
-                </Button>
-              </Menu.Target>
-
-              <Menu.Dropdown>
-                {routing.locales.map((l) => (
-                  <Menu.Item
-                    key={l}
-                    component={Link}
-                    href={{ pathname }}
-                    locale={l}
-                  >
-                    {localeMapping[l].title}
-                  </Menu.Item>
-                ))}
-              </Menu.Dropdown>
-            </Menu>
-          </Stack>
+        {/* <Group h="100%"> */}
+        <Group visibleFrom="md">
+          {renderLinks()}
+          <Menu arrowSize={10} shadow="md" trigger="hover" withArrow>
+            <Menu.Target>
+              <Button
+                radius="xl"
+                rightSection={
+                  <ThemeIcon c="dark-blue" size="xs" variant="transparent">
+                    <IconChevronDown strokeWidth={1.5} />
+                  </ThemeIcon>
+                }
+                size="compact-xs"
+                variant="outline"
+              >
+                {localeMapping[locale].title}
+              </Button>
+            </Menu.Target>
+            <Menu.Dropdown>
+              {routing.locales.map((l) => (
+                <Menu.Item
+                  key={l}
+                  component={Link}
+                  href={{ pathname }}
+                  locale={l}
+                >
+                  {localeMapping[l].title}
+                </Menu.Item>
+              ))}
+            </Menu.Dropdown>
+          </Menu>
         </Group>
+        <Burger hiddenFrom="md" opened={drawerOpened} onClick={toggleDrawer} />
       </Group>
 
       <Drawer
@@ -169,7 +176,30 @@ export function HeaderComponent() {
         zIndex="calc(var(--mantine-z-index-app) / 2)"
         onClose={closeDrawer}
       >
-        <Stack align="center">{renderLinks("lg")}</Stack>
+        <Stack align="center">
+          <Group mb="xl">
+            {routing.locales.map((l, idx) => (
+              <>
+                <Button
+                  key={l}
+                  color="var(--mantine-color-text)"
+                  component={Link}
+                  href={{ pathname }}
+                  locale={l}
+                  size="lg"
+                  variant="subtle"
+                  onClick={closeDrawer}
+                >
+                  {localeMapping[l].title}
+                </Button>
+                {idx % 2 === 0 ? (
+                  <Divider key={`${l}.divider`} orientation="vertical" />
+                ) : null}
+              </>
+            ))}
+          </Group>
+          {renderLinks("lg")}
+        </Stack>
       </Drawer>
     </>
   );
