@@ -122,33 +122,35 @@ export function HeaderComponent() {
             </Stack>
           </Group>
         </Anchor>
-        <Group>
+        <Group h="100%">
           <Group visibleFrom="md">{renderLinks()}</Group>
-          <Menu arrowSize={10} shadow="md" withArrow>
-            <Menu.Target>
-              <Button radius="xl" size="xs" variant="outline">
-                {localeMapping[locale].label}
-              </Button>
-            </Menu.Target>
+          <Stack align="flex-end" gap={0} h="100%" justify="space-evenly">
+            <Burger
+              hiddenFrom="md"
+              opened={drawerOpened}
+              onClick={toggleDrawer}
+            />
+            <Menu arrowSize={10} shadow="md" withArrow>
+              <Menu.Target>
+                <Button radius="xl" size="compact-xs" variant="outline">
+                  {localeMapping[locale].label}
+                </Button>
+              </Menu.Target>
 
-            <Menu.Dropdown>
-              {routing.locales.map((l) => (
-                <Menu.Item
-                  key={l}
-                  component={Link}
-                  href={{ pathname }}
-                  locale={l}
-                >
-                  {localeMapping[l].title}
-                </Menu.Item>
-              ))}
-            </Menu.Dropdown>
-          </Menu>
-          <Burger
-            hiddenFrom="md"
-            opened={drawerOpened}
-            onClick={toggleDrawer}
-          />
+              <Menu.Dropdown>
+                {routing.locales.map((l) => (
+                  <Menu.Item
+                    key={l}
+                    component={Link}
+                    href={{ pathname }}
+                    locale={l}
+                  >
+                    {localeMapping[l].title}
+                  </Menu.Item>
+                ))}
+              </Menu.Dropdown>
+            </Menu>
+          </Stack>
         </Group>
       </Group>
 
