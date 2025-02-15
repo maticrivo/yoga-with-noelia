@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Parisienne } from "next/font/google";
+import { Open_Sans, Parisienne } from "next/font/google";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
@@ -17,6 +17,11 @@ import {
 import { getLangDir } from "rtl-detect";
 
 import { Locale, routing } from "@/i18n/routing";
+
+type Props = {
+  children: ReactNode;
+  params: Promise<{ locale: Locale }>;
+};
 
 const Alta = localFont({
   src: [
@@ -43,16 +48,25 @@ const GveretLevin = localFont({
   ],
 });
 
+const Dorian = localFont({
+  src: [
+    {
+      path: "../../public/DorianCLM.woff2",
+      style: "normal",
+      weight: "400",
+    },
+  ],
+});
+
 const parisienne = Parisienne({
   subsets: ["latin"],
   display: "swap",
   weight: "400",
 });
 
-type Props = {
-  children: ReactNode;
-  params: Promise<{ locale: Locale }>;
-};
+const openSans = Open_Sans({
+  subsets: ["hebrew", "latin"],
+});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -119,21 +133,21 @@ export default async function LocaleLayout({ children, params }: Props) {
                   ],
                 },
                 other: {
-                  sloganFont:
+                  sloganFontFamily:
                     locale === "he"
-                      ? {
-                          fontFamily: GveretLevin.style.fontFamily,
-                          fontWeight: "normal",
-                        }
-                      : {
-                          fontFamily: parisienne.style.fontFamily,
-                          fontWeight: "normal",
-                        },
+                      ? GveretLevin.style.fontFamily
+                      : parisienne.style.fontFamily,
+                  sloganFontWeight: "normal",
                 },
                 headings: {
-                  fontFamily: Alta.style.fontFamily,
+                  fontFamily:
+                    locale === "he"
+                      ? Dorian.style.fontFamily
+                      : Alta.style.fontFamily,
                   fontWeight: "normal",
                 },
+                fontFamily: openSans.style.fontFamily,
+                primaryColor: "dark-blue",
                 components: {
                   Button: {
                     defaultProps: {
@@ -162,7 +176,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                   Input: {
                     styles: {
                       input: {
-                        color: "dark-blue",
+                        color: "var(--mantine-color-dark-blue-text)",
                         fontWeight: "lighter",
                       },
                     },
@@ -170,11 +184,11 @@ export default async function LocaleLayout({ children, params }: Props) {
                   InputWrapper: {
                     styles: {
                       label: {
-                        color: "dark-blue",
+                        color: "var(--mantine-color-dark-blue-text)",
                         fontWeight: "lighter",
                       },
                       required: {
-                        color: "dark-blue",
+                        color: "var(--mantine-color-dark-blue-text)",
                       },
                     },
                   },

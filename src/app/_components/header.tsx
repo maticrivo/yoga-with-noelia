@@ -129,8 +129,8 @@ export function HeaderComponent() {
                 {t("title")}
               </Title>
               <Text
-                ff={theme.other.sloganFont.fontFamily}
-                fw={theme.other.sloganFont.fontWeight}
+                ff={theme.other.sloganFontFamily}
+                fw={theme.other.sloganFontWeight}
                 fz={subtitleFz}
               >
                 {t("slogan")}
@@ -169,7 +169,12 @@ export function HeaderComponent() {
             </Menu.Dropdown>
           </Menu>
         </Group>
-        <Burger hiddenFrom="md" opened={drawerOpened} onClick={toggleDrawer} />
+        <Burger
+          color="dark-blue"
+          hiddenFrom="md"
+          opened={drawerOpened}
+          onClick={toggleDrawer}
+        />
       </Group>
 
       <Drawer
