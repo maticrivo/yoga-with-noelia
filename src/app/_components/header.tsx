@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback } from "react";
+import { Fragment, useCallback } from "react";
 import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import {
@@ -12,13 +12,13 @@ import {
   Drawer,
   Group,
   Menu,
-  NavLink,
   rem,
   Stack,
   Text,
   ThemeIcon,
   Title,
   useMantineTheme,
+  useMatches,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
@@ -40,6 +40,23 @@ export function HeaderComponent() {
   const theme = useMantineTheme();
   const pathname = usePathname();
   const params = useParams();
+  const logoSize = useMatches({
+    base: "calc(var(--mantine-spacing-xl) * 1.75)",
+    xs: "calc(var(--mantine-spacing-xl) * 2.3)",
+  });
+  const titleFz = useMatches({
+    base: rem(22),
+    xs: rem(28),
+  });
+  const subtitleFz = useMatches({
+    base: "lg",
+    xs: "xl",
+  });
+  const gap = useMatches({
+    base: 0,
+    xs: "xs",
+  });
+
   const locale = (params?.locale || routing.defaultLocale) as Locale;
 
   const renderLinks = useCallback(
@@ -103,30 +120,24 @@ export function HeaderComponent() {
 
   return (
     <>
-      <Group align="center" gap="xs" h="100%" justify="space-between">
-        <Anchor component={Link} href="#adult-yoga" underline="never">
+      <Group align="center" gap={gap} h="100%" justify="space-between">
+        <Anchor component={Link} h="100%" href="#adult-yoga" underline="never">
           <Group align="center" gap="sm" h="100%">
-            <YogaLogo
-              c="dark-blue"
-              fill
-              size="calc(var(--mantine-spacing-xl) * 2.3)"
-              strokeWidth={0}
-            />
+            <YogaLogo c="dark-blue" fill size={logoSize} strokeWidth={0} />
             <Stack align="flex-end" gap={0}>
-              <Title fz={28} order={1}>
+              <Title fz={titleFz} order={1}>
                 {t("title")}
               </Title>
               <Text
                 ff={theme.other.sloganFont.fontFamily}
                 fw={theme.other.sloganFont.fontWeight}
-                fz="xl"
+                fz={subtitleFz}
               >
                 {t("slogan")}
               </Text>
             </Stack>
           </Group>
         </Anchor>
-        {/* <Group h="100%"> */}
         <Group visibleFrom="md">
           {renderLinks()}
           <Menu arrowSize={10} shadow="md" trigger="hover" withArrow>
@@ -147,7 +158,7 @@ export function HeaderComponent() {
             <Menu.Dropdown>
               {routing.locales.map((l) => (
                 <Menu.Item
-                  key={l}
+                  key={`menu.${l}`}
                   component={Link}
                   href={{ pathname }}
                   locale={l}
@@ -179,9 +190,8 @@ export function HeaderComponent() {
         <Stack align="center">
           <Group mb="xl">
             {routing.locales.map((l, idx) => (
-              <>
+              <Fragment key={`button.${l}`}>
                 <Button
-                  key={l}
                   color="var(--mantine-color-text)"
                   component={Link}
                   href={{ pathname }}
@@ -192,10 +202,8 @@ export function HeaderComponent() {
                 >
                   {localeMapping[l].title}
                 </Button>
-                {idx % 2 === 0 ? (
-                  <Divider key={`${l}.divider`} orientation="vertical" />
-                ) : null}
-              </>
+                {idx % 2 === 0 ? <Divider orientation="vertical" /> : null}
+              </Fragment>
             ))}
           </Group>
           {renderLinks("lg")}
