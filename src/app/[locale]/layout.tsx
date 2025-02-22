@@ -110,6 +110,10 @@ export default async function LocaleLayout({ children, params }: Props) {
     >
       <head>
         <ColorSchemeScript />
+        <meta
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+          name="viewport"
+        />
       </head>
 
       <body>
@@ -119,7 +123,7 @@ export default async function LocaleLayout({ children, params }: Props) {
               defaultColorScheme="light"
               theme={createTheme({
                 colors: {
-                  "dark-blue": [
+                  "yoga-blue": [
                     "#002441",
                     "#002441",
                     "#002441",
@@ -130,6 +134,18 @@ export default async function LocaleLayout({ children, params }: Props) {
                     "#002441",
                     "#002441",
                     "#002441",
+                  ],
+                  "yoga-pink": [
+                    "#bfa6ab",
+                    "#bfa6ab",
+                    "#bfa6ab",
+                    "#bfa6ab",
+                    "#bfa6ab",
+                    "#bfa6ab",
+                    "#bfa6ab",
+                    "#bfa6ab",
+                    "#bfa6ab",
+                    "#bfa6ab",
                   ],
                 },
                 other: {
@@ -147,36 +163,36 @@ export default async function LocaleLayout({ children, params }: Props) {
                   fontWeight: "normal",
                 },
                 fontFamily: openSans.style.fontFamily,
-                primaryColor: "dark-blue",
+                primaryColor: "yoga-blue",
                 components: {
                   Button: {
                     defaultProps: {
-                      c: "dark-blue",
-                      color: "dark-blue",
+                      c: "yoga-blue",
+                      color: "yoga-blue",
                       fw: "normal",
                     },
                   },
                   Divider: {
                     defaultProps: {
-                      color: "dark-blue",
+                      color: "yoga-blue",
                       size: "xs",
                     },
                   },
                   Text: {
                     defaultProps: {
-                      c: "dark-blue",
+                      c: "yoga-blue",
                       fw: "lighter",
                     },
                   },
                   Title: {
                     defaultProps: {
-                      c: "dark-blue",
+                      c: "yoga-blue",
                     },
                   },
                   Input: {
                     styles: {
                       input: {
-                        color: "var(--mantine-color-dark-blue-text)",
+                        color: "var(--mantine-color-yoga-blue-text)",
                         fontWeight: "lighter",
                       },
                     },
@@ -184,11 +200,11 @@ export default async function LocaleLayout({ children, params }: Props) {
                   InputWrapper: {
                     styles: {
                       label: {
-                        color: "var(--mantine-color-dark-blue-text)",
+                        color: "var(--mantine-color-yoga-blue-text)",
                         fontWeight: "lighter",
                       },
                       required: {
-                        color: "var(--mantine-color-dark-blue-text)",
+                        color: "var(--mantine-color-yoga-blue-text)",
                       },
                     },
                   },

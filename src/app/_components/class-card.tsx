@@ -1,13 +1,14 @@
 "use client";
 
 import { useMemo } from "react";
-import { Anchor, Card, CardProps, Stack, Text, Title } from "@mantine/core";
+import { useTranslations } from "next-intl";
+import { Anchor, Paper, PaperProps, Stack, Text, Title } from "@mantine/core";
 
 import { Link } from "@/i18n/routing";
 
 import LotusIcon from "./lotus-icon";
 
-interface ClassCardProps extends CardProps {
+interface ClassCardProps extends PaperProps {
   description: string | string[];
   hideIcon?: boolean;
   title?: string;
@@ -19,18 +20,20 @@ export default function ClassCard({
   title,
   ...props
 }: ClassCardProps) {
+  const t = useTranslations("ClassCard");
   const paragraphs = useMemo(() => {
     if (typeof description === "object") {
       return description;
     }
     return [description];
   }, [description]);
+
   return (
-    <Card
+    <Paper
       bg="transparent"
-      padding="xl"
+      p="xl"
       shadow="xs"
-      style={(theme) => ({ borderColor: theme.colors["dark-blue"][0] })}
+      styles={{ root: { borderColor: "var(--mantine-color-yoga-blue-0)" } }}
       withBorder
       {...props}
     >
@@ -50,22 +53,22 @@ export default function ClassCard({
         {!hideIcon ? (
           <>
             <LotusIcon
-              c="dark-blue"
+              c="yoga-blue"
               size="calc(var(--ti-size-xl) * 2)"
               strokeWidth={1.5}
             />
             <Anchor
-              c="dark-blue"
+              c="yoga-blue"
               component={Link}
               href="#contact"
               size="sm"
               underline="always"
             >
-              Reserva tu lugar y comienza la práctica.
+              {t("reserve")}
             </Anchor>
           </>
         ) : null}
       </Stack>
-    </Card>
+    </Paper>
   );
 }

@@ -18,27 +18,22 @@ type Props = {
 export default async function PageLayout({ children }: Props) {
   return (
     <AppShell
-      // footer={{
-      //   height: rem(40),
-      // }}
       header={{
         height: rem(80),
       }}
       padding="md"
     >
-      <AppShellHeader bg="white" style={{ borderBottomColor: "dark-blue" }}>
+      <AppShellHeader
+        bg="white"
+        style={{ borderColor: "var(--mantine-color-yoga-blue-0)" }}
+      >
         <Container h="100%" size="xl">
           <HeaderComponent />
         </Container>
       </AppShellHeader>
-      <AppShellMain bg="#bfa6ab">
+      <AppShellMain bg="yoga-pink">
         <Container size="xl">{children}</Container>
       </AppShellMain>
-      {/* <AppShellFooter>
-        <Container h="100%" size="xl">
-          <FooterComponent />
-        </Container>
-      </AppShellFooter> */}
     </AppShell>
   );
 }

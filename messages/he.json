@@ -19,20 +19,21 @@
   "About": {
     "title": "עליי",
     "messages": {
-      "1": "Practico yoga desde 2016, explorando diferentes metodologías y aprendiendo de diversos maestros. Con el tiempo, esta disciplina me ha brindado una profunda sensación de calma y conexión conmigo misma, una experiencia transformadora que me llevó a profundizar en su estudio y enseñanza.",
-      "2": "Mi objetivo es poder llevar y transmitir la practica de yoga a la mayor cantidad de gente que quiera incursionar en la practica.",
-      "3": "Formación",
-      "4": "2018 - Yoga para Niños | Kidding Around Yoga con Nieke Franken, Iafo.",
-      "5": "2020-2022 - 500 RYT Profesora de Yoga Ashtanga Vinyasa | OMYoga con Shani Sharon, Raanana.",
-      "6": "2022-2023 - Asistente en curso para maestros de yoga | OMYoga.",
-      "7": "2024 - Actualidad - Diplomado en Vinculación Corporal y Movimiento Somático | EastWest Somatics Institute con Ashley Meeder (online, México).",
-      "8": "2020 - Actualidad - Miembro de la Asociación Israelí de Yoga (ISYOGA)."
+      "1": "אני מתרגלת יוגה מאז 2016, חוקרת שיטות שונות ולומדת ממורים מגוונים. עם הזמן, הדיסציפלינה הזו העניקה לי תחושת רוגע וחיבור עמוק לעצמי – חוויה טרנספורמטיבית שהובילה אותי להעמיק בלימוד ובהוראת היוגה.",
+      "2": "המטרה שלי היא להביא ולהנגיש את תרגול היוגה לכמה שיותר אנשים שמעוניינים להיכנס לעולם הזה.",
+      "3": "השכלה",
+      "4": "2018 – יוגה לילדים | Kidding Around Yoga עם נייקה פרנקן, יפו.",
+      "5": "2020-2022 – 500 RYT מורה ליוגה אשטנגה ויניאסה | OMYoga עם שני שרון, רעננה.",
+      "6": "2022-2023 – אסיסטנטית בקורס להכשרת מורי יוגה | OMYoga.",
+      "7": "2020 - כיום – חברה באיגוד הישראלי ליוגה (ISYOGA).",
+      "8": "2024 - כיום – דיפלומה בקשר גוף-תנועה וסומאטיקה | EastWest Somatics Institute עם אשלי מידר (לימודים מקוונים, מקסיקו)."
     }
   },
   "Contact": {
     "title": "צור קשר",
-    "description": "Si quieres inscribirte, recibir más información sobre clases individuales, unirte a un grupo presencial o por Zoom, o conocer más sobre un evento específico, envíame un mensaje con tu número de teléfono y te contactaré a la brevedad.",
+    "description": "אם ברצונך להירשם, לקבל מידע נוסף על שיעורים פרטיים, להצטרף לקבוצה פרונטלית או בזום, או ללמוד עוד על אירוע מסוים – שלח/י לי הודעה עם מספר הטלפון שלך ואחזור אליך בהקדם.",
     "follow": "עקבו אחרי",
+    "whatsappMessage": "{message}\n\n{name} - {email}.",
     "form": {
       "name": {
         "label": "שם",
@@ -54,7 +55,7 @@
     }
   },
   "ClassCard": {
-    "reserve": "Reserva tu lugar y comienza la práctica."
+    "reserve": "שריין/י את מקומך והתחל/י את התרגול"
   },
   "AdultYoga": {
     "title": "יוגה למבוגרים",
@@ -64,33 +65,33 @@
     },
     "2": {
       "title": "ויניאסה דינאמית (Vinyasa Flow)",
-      "description": "ויניאסה יוגה היא סוג של יוגה דינמית המתאמת תנועה ונשימה באמצעות רצפים שונים של תנוחות (אסנות) המקושרות יחד. התרגול מתפתח ברצף דינמי, זורם ומדיטטיבי. בשונה לאשטנגה ויניאסה יוגה, סדר התנוחות ב-Flow Vinyasa אינו קבוע ויש יותר גמישות ושונות במבנה הרצף והתרגול. שיעור זה אידיאלי להתחיל לתרגל יוגה."
+      "description": "ויניאסה יוגה היא סוג של יוגה דינמית המתאמת תנועה ונשימה באמצעות רצפים שונים של תנוחות (אסנות) המקושרות יחד. התרגול מתפתח ברצף דינמי, זורם ומדיטטיבי. בשונה לאשטנגה ויניאסה יוגה, סדר התנוחות ב-Vinyasa Flow אינו קבוע ויש יותר גמישות ושונות במבנה הרצף והתרגול. שיעור זה אידיאלי להתחיל לתרגל יוגה."
     },
     "3": {
       "title": "יוגה לגיל הזהב",
       "description": "בשיעור היוגה למבוגרים אנו משתמשים באביזרים שונים כדי להתאים את התרגול לצרכים של כל משתתף. תרגול תקופתי של יוגה משפר באופן כללי את היציבה ומסייע בשמירה על שיווי המשקל,  השיעור מרגיע ומחזק את השרירים, מה שמקל על התנועה. כמו כן, הוא משפר את הנשימה.  לצד זאת, לעוסקים ביוגה, יתרונות נוספים הרלוונטיים לפי כמה שכן בגיל הזהב- והערך החברתי שבכל מפגש, כמו גם תחושת החיות והאנרגיה שמיפה את המתרגל באופן מיידי ולאורך זמן."
     },
     "4": {
-      "title": "Movimiento Somático",
-      "description": "El yoga somático es una de las variantes que te ayudará a mover tu cuerpo de una manera sumamente consciente, lento  y a la par, tendrás un momento para despejar la mente y sanar tus emociones. Ayuda a nivel cuerpo mente a sentirnos seguros, lo cual es la prioridad número uno para nuestro cerebro. Ayuda a reducir la tensión y trabaja profundamente el Sistema Nerviso Autonomo."
+      "title": "יוגה סומטית",
+      "description": "יוגה סומטית היא שיטה המשלבת טכניקות יוגה מסורתיות עם עקרונות תנועה סומטיים כדי להעמיק את המודעות גוף-נפש, לשחרר מתחים ולשפר את הרווחה הכללית. גישה זו מתמקדת בתנועות עדינות ומודעות המעודדות חיבור עמוק יותר לתחושות הגוף ולמערכת העצבים."
     }
   },
   "KidYoga": {
     "title": "יוגה לילדים",
     "1": {
-      "title": "Metodología KAY",
-      "description": "Se basa en tres pilares fundamentales: Música: Las clases incorporan canciones que acompañan los movimientos, ayudando a los niños a disfrutar de la práctica y a mejorar su concentración. Movimiento: El yoga se presenta demanera lúdica y creativa, usando juegos y ejercicios que permiten a los niños explorar su cuerpo y emociones. Curiosidad y Mindfulness: Se fomenta el desarrollo de la conciencia emocional,reconociendo y gestionando las emociones a través de prácticas de mindfulness adaptadas a su edad"
+      "title": "מתודולוגיית KAY",
+      "description": "השיטה מבוססת על שלושה עקרונות יסודיים: מוזיקה – השיעורים כוללים שירים שמלווים את התנועות, ועוזרים לילדים ליהנות מהתרגול ולשפר את הריכוז. תנועה – היוגה מוצגת בצורה משחקית ויצירתית, באמצעות משחקים ותרגילים שמאפשרים לילדים לחקור את גופם ורגשותיהם. סקרנות ומיינדפולנס – השיטה מעודדת פיתוח מודעות רגשית, זיהוי וניהול רגשות דרך תרגולי מיינדפולנס המותאמים לגילם."
     },
     "2": {
-      "title": "KAY - Aprendizaje segundo idioma",
-      "description": "Las clases se pueden estructurar para realizarlas en inglés, hebreo o español de forma muy lúdica y didáctica los niños incorporan una herramienta adicional de enseñanza a través del yoga, lo que potencia tanto el desarrollo corporal como cognitivo."
+      "title": "למידת שפה שנייה - KAY",
+      "description": "ניתן לבנות את השיעורים באנגלית, עברית או ספרדית. בצורה משחקית ודידקטית, הילדים רוכשים כלי לימודי נוסף דרך היוגה, מה שמחזק הן את ההתפתחות הגופנית והן את ההתפתחות הקוגניטיבית שלהם."
     }
   },
   "Seminars": {
     "title": "השתלמויות וכנסים מיוחדים",
     "1": {
       "title": "",
-      "description": "Los seminarios son experiencias enriquecedoras diseñadas para profundizar un tema en particular en la práctica y filosofía del yoga. Exploramos posturas, técnicas de respiración, meditación y movimiento somatico. Estos encuentros son ideales tanto para principiantes como para practicantes avanzados que desean ampliar su conocimiento y profundizar su práctica para conectar más profundamente con su cuerpo y mente."
+      "description": "הסמינרים הם חוויות מעשירות המיועדות להעמקה בנושא מסוים בתרגול ובפילוסופיה של היוגה. אנו חוקרים תנוחות, טכניקות נשימה, מדיטציה ותנועה סומטית. מפגשים אלו אידיאליים הן למתחילים והן למתרגלים מתקדמים שרוצים להרחיב את הידע שלהם ולהעמיק את תרגול היוגה כדי להתחבר עמוק יותר לגוף ולנפש."
     }
   }
 }

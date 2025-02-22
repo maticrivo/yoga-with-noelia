@@ -123,7 +123,7 @@ export function HeaderComponent() {
       <Group align="center" gap={gap} h="100%" justify="space-between">
         <Anchor component={Link} h="100%" href="#adult-yoga" underline="never">
           <Group align="center" gap="sm" h="100%">
-            <YogaLogo c="dark-blue" fill size={logoSize} strokeWidth={0} />
+            <YogaLogo c="yoga-blue" fill size={logoSize} strokeWidth={0} />
             <Stack align="flex-end" gap={0}>
               <Title fz={titleFz} order={1}>
                 {t("title")}
@@ -145,7 +145,7 @@ export function HeaderComponent() {
               <Button
                 radius="xl"
                 rightSection={
-                  <ThemeIcon c="dark-blue" size="xs" variant="transparent">
+                  <ThemeIcon c="yoga-blue" size="xs" variant="transparent">
                     <IconChevronDown strokeWidth={1.5} />
                   </ThemeIcon>
                 }
@@ -170,7 +170,7 @@ export function HeaderComponent() {
           </Menu>
         </Group>
         <Burger
-          color="dark-blue"
+          color="yoga-blue"
           hiddenFrom="md"
           opened={drawerOpened}
           onClick={toggleDrawer}

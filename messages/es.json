@@ -25,14 +25,15 @@
       "4": "2018 - Yoga para Niños | Kidding Around Yoga con Nieke Franken, Iafo.",
       "5": "2020-2022 - 500 RYT Profesora de Yoga Ashtanga Vinyasa | OMYoga con Shani Sharon, Raanana.",
       "6": "2022-2023 - Asistente en curso para maestros de yoga | OMYoga.",
-      "7": "2024 - Actualidad - Diplomado en Vinculación Corporal y Movimiento Somático | EastWest Somatics Institute con Ashley Meeder (online, México).",
-      "8": "2020 - Actualidad - Miembro de la Asociación Israelí de Yoga (ISYOGA)."
+      "7": "2020 - Actualidad - Miembro de la Asociación Israelí de Yoga (ISYOGA).",
+      "8": "2024 - Actualidad - Diplomado en Vinculación Corporal y Movimiento Somático | EastWest Somatics Institute con Ashley Meeder (online, México)."
     }
   },
   "Contact": {
     "title": "Contacto",
     "description": "Si quieres inscribirte, recibir más información sobre clases individuales, unirte a un grupo presencial o por Zoom, o conocer más sobre un evento específico, envíame un mensaje con tu número de teléfono y te contactaré a la brevedad.",
     "follow": "Follow me on Instagram",
+    "whatsappMessage": "{message}\n\n{name} - {email}.",
     "form": {
       "name": {
         "label": "Nombre",
@@ -54,7 +55,7 @@
     }
   },
   "ClassCard": {
-    "reserve": "Reserva tu lugar y comienza la práctica."
+    "reserve": "Reserva tu lugar y comienza la práctica"
   },
   "AdultYoga": {
     "title": "Yoga para Adultos",
@@ -72,14 +73,14 @@
     },
     "4": {
       "title": "Movimiento Somático",
-      "description": "El yoga somático es una de las variantes que te ayudará a mover tu cuerpo de una manera sumamente consciente, lento  y a la par, tendrás un momento para despejar la mente y sanar tus emociones. Ayuda a nivel cuerpo mente a sentirnos seguros, lo cual es la prioridad número uno para nuestro cerebro. Ayuda a reducir la tensión y trabaja profundamente el Sistema Nervioso Autónomo. Ideal para trabajar en clases particulares."
+      "description": "El yoga somático es un método que combina técnicas tradicionales de yoga con principios de movimiento somático para profundizar la conciencia cuerpo-mente, liberar tensiones y mejorar el bienestar general. Este enfoque se centra en movimientos suaves y conscientes que fomentan una conexión más profunda con las sensaciones corporales y el sistema nervioso. Es ideal para trabajar en clases particulares."
     }
   },
   "KidYoga": {
     "title": "Yoga para Niños",
     "1": {
       "title": "Metodología KAY",
-      "description": "Se basa en tres pilares fundamentales: Música: Las clases incorporan canciones que acompañan los movimientos, ayudando a los niños a disfrutar de la práctica y a mejorar su concentración. Movimiento: El yoga se presenta demanera lúdica y creativa, usando juegos y ejercicios que permiten a los niños explorar su cuerpo y emociones. Curiosidad y Mindfulness: Se fomenta el desarrollo de la conciencia emocional,reconociendo y gestionando las emociones a través de prácticas de mindfulness adaptadas a su edad"
+      "description": "Se basa en tres pilares fundamentales: Música: Las clases incorporan canciones que acompañan los movimientos, ayudando a los niños a disfrutar de la práctica y a mejorar su concentración. Movimiento: El yoga se presenta de manera lúdica y creativa, usando juegos y ejercicios que permiten a los niños explorar su cuerpo y emociones. Curiosidad y Mindfulness: Se fomenta el desarrollo de la conciencia emocional,reconociendo y gestionando las emociones a través de prácticas de mindfulness adaptadas a su edad."
     },
     "2": {
       "title": "KAY - Aprendizaje segundo idioma",
