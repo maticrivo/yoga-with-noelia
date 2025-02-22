@@ -2,21 +2,25 @@
 
 import { useMemo } from "react";
 import { useTranslations } from "next-intl";
-import { Anchor, Paper, PaperProps, Stack, Text, Title } from "@mantine/core";
+import {
+  Anchor,
+  Paper,
+  PaperProps,
+  Space,
+  Stack,
+  Text,
+  Title,
+} from "@mantine/core";
 
 import { Link } from "@/i18n/routing";
 
-import LotusIcon from "./lotus-icon";
-
 interface ClassCardProps extends PaperProps {
   description: string | string[];
-  hideIcon?: boolean;
   title?: string;
 }
 
 export default function ClassCard({
   description,
-  hideIcon,
   title,
   ...props
 }: ClassCardProps) {
@@ -50,24 +54,16 @@ export default function ClassCard({
             </Text>
           ))}
         </Stack>
-        {!hideIcon ? (
-          <>
-            <LotusIcon
-              c="yoga-blue"
-              size="calc(var(--ti-size-xl) * 2)"
-              strokeWidth={1.5}
-            />
-            <Anchor
-              c="yoga-blue"
-              component={Link}
-              href="#contact"
-              size="sm"
-              underline="always"
-            >
-              {t("reserve")}
-            </Anchor>
-          </>
-        ) : null}
+        <Space h="xl" />
+        <Anchor
+          c="yoga-blue"
+          component={Link}
+          href="#contact"
+          size="sm"
+          underline="always"
+        >
+          {t("reserve")}
+        </Anchor>
       </Stack>
     </Paper>
   );

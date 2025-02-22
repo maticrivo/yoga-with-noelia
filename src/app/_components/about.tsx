@@ -18,7 +18,6 @@ export function AboutSection() {
         <ClassCard
           c="blue.9"
           description={keys.map((key) => t(`messages.${key}`))}
-          hideIcon
         />
       </SimpleGrid>
     </Stack>
