@@ -91,7 +91,7 @@ export function ContactUsSection() {
       styles={{ root: { borderColor: "var(--mantine-color-yoga-blue-0)" } }}
       withBorder
     >
-      <Flex direction={{ base: "column-reverse", md: "row" }}>
+      <Flex direction={{ base: "column-reverse", md: "row-reverse" }}>
         <Box bg="yoga-blue">
           <Stack h="100%" justify="center" p="xl">
             {items}
