@@ -4,19 +4,14 @@ import { useTranslations } from "next-intl";
 import {
   Anchor,
   Box,
-  Button,
-  Flex,
+  Center,
   Group,
   Paper,
-  SimpleGrid,
   Stack,
   Text,
-  Textarea,
-  TextInput,
   ThemeIcon,
   Title,
 } from "@mantine/core";
-import { useForm } from "@mantine/form";
 import {
   IconAt,
   IconBrandInstagram,
@@ -25,21 +20,21 @@ import {
 
 export function ContactUsSection() {
   const t = useTranslations("Contact");
-  const form = useForm({
-    mode: "uncontrolled",
-    initialValues: {
-      name: "",
-      email: "",
-      // phone: "",
-      message: "",
-    },
-  });
+  // const form = useForm({
+  //   mode: "uncontrolled",
+  //   initialValues: {
+  //     name: "",
+  //     email: "",
+  //     // phone: "",
+  //     message: "",
+  //   },
+  // });
 
-  const handleSubmit = (values: typeof form.values) => {
-    window.open(
-      `https://wa.me/+972524242400?text=${encodeURIComponent(t("whatsappMessage", values))}`,
-    );
-  };
+  // const handleSubmit = (values: typeof form.values) => {
+  //   window.open(
+  //     `https://wa.me/+972524242400?text=${encodeURIComponent(t("whatsappMessage", values))}`,
+  //   );
+  // };
 
   const items = [
     {
@@ -84,20 +79,25 @@ export function ContactUsSection() {
   ));
 
   return (
-    <Paper
-      bg="transparent"
-      p={0}
-      shadow="xs"
-      styles={{ root: { borderColor: "var(--mantine-color-yoga-blue-0)" } }}
-      withBorder
-    >
-      <Flex direction={{ base: "column-reverse", md: "row-reverse" }}>
-        <Box bg="yoga-blue">
+    <Center>
+      <Paper
+        bg="transparent"
+        p={0}
+        shadow="xs"
+        w={{ base: "100%", md: "50%" }}
+        // styles={{ root: { borderColor: "var(--mantine-color-yoga-blue-0)" } }}
+        // withBorder
+      >
+        {/* <Flex direction={{ base: "column-reverse", md: "row-reverse" }}> */}
+        <Box bg="yoga-blue" c="yoga-pink">
           <Stack h="100%" justify="center" p="xl">
+            <Title c="yoga-pink" order={2}>
+              {t("title")}
+            </Title>
             {items}
           </Stack>
         </Box>
-        <Box flex={1} p="xl">
+        {/* <Box flex={1} p="xl">
           <form
             encType="text/plain"
             method="post"
@@ -123,12 +123,6 @@ export function ContactUsSection() {
                 />
               </SimpleGrid>
 
-              {/* <TextInput
-                  label={t("form.phone.label")}
-                  placeholder={t("form.phone.placeholder")}
-                  required
-                  {...form.getInputProps("phone")}
-                /> */}
               <Textarea
                 label={t("form.message.label")}
                 placeholder={t("form.message.placeholder")}
@@ -149,8 +143,9 @@ export function ContactUsSection() {
               </Button>
             </Stack>
           </form>
-        </Box>
-      </Flex>
-    </Paper>
+        </Box> */}
+        {/* </Flex> */}
+      </Paper>
+    </Center>
   );
 }

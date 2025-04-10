@@ -49,9 +49,7 @@ export default function ClassCard({
         ) : null}
         <Stack align="start" flex={1} gap="xs">
           {paragraphs.map((p, idx) => (
-            <Text key={+idx} ta="justify">
-              {p}
-            </Text>
+            <Text key={+idx}>{p}</Text>
           ))}
         </Stack>
         <Space h="xl" />

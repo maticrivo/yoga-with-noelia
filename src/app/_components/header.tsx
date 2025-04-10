@@ -143,13 +143,13 @@ export function HeaderComponent() {
           <Menu arrowSize={10} shadow="md" trigger="hover" withArrow>
             <Menu.Target>
               <Button
-                radius="xl"
+                // leftSection={<Text>{localeMapping[locale].flag}</Text>}
                 rightSection={
                   <ThemeIcon c="yoga-blue" size="xs" variant="transparent">
                     <IconChevronDown strokeWidth={1.5} />
                   </ThemeIcon>
                 }
-                size="compact-xs"
+                size="xs"
                 variant="outline"
               >
                 {localeMapping[locale].title}
@@ -161,6 +161,7 @@ export function HeaderComponent() {
                   key={`menu.${l}`}
                   component={Link}
                   href={{ pathname }}
+                  // leftSection={<Text>{localeMapping[l].flag}</Text>}
                   locale={l}
                 >
                   {localeMapping[l].title}

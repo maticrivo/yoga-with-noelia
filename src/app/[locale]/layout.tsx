@@ -11,6 +11,7 @@ import {
 import {
   ColorSchemeScript,
   createTheme,
+  CSSVariablesResolver,
   DirectionProvider,
   MantineProvider,
 } from "@mantine/core";
@@ -85,6 +86,18 @@ export async function generateMetadata({
   };
 }
 
+const resolver: CSSVariablesResolver = (theme) => ({
+  variables: {
+    "--mantine-color-text": theme.colors["yoga-blue"][0],
+  },
+  light: {
+    "--mantine-color-text": theme.colors["yoga-blue"][0],
+  },
+  dark: {
+    "--mantine-color-text": theme.colors["yoga-pink"][0],
+  },
+});
+
 export default async function LocaleLayout({ children, params }: Props) {
   const locale = (await params).locale;
 
@@ -120,6 +133,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           <DirectionProvider initialDirection={direction}>
             <MantineProvider
+              // cssVariablesResolver={resolver}
               defaultColorScheme="light"
               theme={createTheme({
                 colors: {
@@ -167,14 +181,14 @@ export default async function LocaleLayout({ children, params }: Props) {
                 components: {
                   Button: {
                     defaultProps: {
-                      c: "yoga-blue",
-                      color: "yoga-blue",
+                      c: "primary",
+                      color: "primary",
                       fw: "normal",
                     },
                   },
                   Divider: {
                     defaultProps: {
-                      color: "yoga-blue",
+                      color: "var(--mantine-primary-color-filled)",
                       size: "xs",
                     },
                   },

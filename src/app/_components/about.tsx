@@ -7,7 +7,7 @@ import ClassCard from "./class-card";
 
 export function AboutSection() {
   const t = useTranslations("About");
-  const keys = ["1", "2", "3", "4", "5", "6", "7", "8"] as const;
+  const keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9"] as const;
 
   return (
     <Stack>

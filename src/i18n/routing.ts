@@ -1,9 +1,12 @@
 import { createNavigation } from "next-intl/navigation";
 import { defineRouting } from "next-intl/routing";
 
-export const localeMapping: Record<Locale, { label: string; title: string }> = {
-  es: { label: "ES", title: "Español" },
-  he: { label: "עב", title: "עברית" },
+export const localeMapping: Record<
+  Locale,
+  { label: string; title: string; flag: string }
+> = {
+  es: { label: "ES", title: "Español", flag: "🇪🇸" },
+  he: { label: "עב", title: "עברית", flag: "🇮🇱" },
 };
 
 export const routing = defineRouting({
