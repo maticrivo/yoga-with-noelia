@@ -33,7 +33,7 @@
   "Contact": {
     "title": "Contacto",
     "description": "Si quieres inscribirte, recibir más información sobre clases individuales, unirte a un grupo presencial o por Zoom, o conocer más sobre un evento específico, envíame un mensaje con tu número de teléfono y te contactaré a la brevedad.",
-    "follow": "Follow me on Instagram",
+    "follow": "Follow me on {brand}",
     "whatsappMessage": "{message}\n\n{name} - {email}.",
     "form": {
       "name": {

@@ -16,6 +16,7 @@ import {
   IconAt,
   IconBrandInstagram,
   IconBrandWhatsapp,
+  IconBrandYoutube,
 } from "@tabler/icons-react";
 
 export function ContactUsSection() {
@@ -50,10 +51,16 @@ export function ContactUsSection() {
       icon: IconBrandWhatsapp,
     },
     {
-      title: t("follow"),
+      title: t("follow", { brand: "Instagram" }),
       description: "yoga_with_noelia",
       href: "https://www.instagram.com/yoga_with_noelia/",
       icon: IconBrandInstagram,
+    },
+    {
+      title: t("follow", { brand: "YouTube" }),
+      description: "yoga_with_noelia",
+      href: "https://www.youtube.com/@yoga_with_noelia",
+      icon: IconBrandYoutube,
     },
   ].map(({ description, href, icon: Icon, title }, index) => (
     <Group key={+index} align="center" gap="xs">
