@@ -1,8 +1,10 @@
 "use client";
 
+import NextImage from "next/image";
 import { useTranslations } from "next-intl";
-import { SimpleGrid, Stack, Title } from "@mantine/core";
+import { Image, SimpleGrid, Stack, Title } from "@mantine/core";
 
+import foto from "../../public/foto.jpg";
 import ClassCard from "./class-card";
 
 export function AboutSection() {
@@ -18,6 +20,17 @@ export function AboutSection() {
         <ClassCard
           c="blue.9"
           description={keys.map((key) => t(`messages.${key}`))}
+          image={
+            <Image
+              alt="Noelia"
+              component={NextImage}
+              height={450}
+              src={foto}
+              style={{
+                borderRadius: "var(--mantine-radius-md)",
+              }}
+            />
+          }
         />
       </SimpleGrid>
     </Stack>

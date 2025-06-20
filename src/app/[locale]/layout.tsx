@@ -11,7 +11,6 @@ import {
 import {
   ColorSchemeScript,
   createTheme,
-  CSSVariablesResolver,
   DirectionProvider,
   MantineProvider,
 } from "@mantine/core";
@@ -86,17 +85,17 @@ export async function generateMetadata({
   };
 }
 
-const resolver: CSSVariablesResolver = (theme) => ({
-  variables: {
-    "--mantine-color-text": theme.colors["yoga-blue"][0],
-  },
-  light: {
-    "--mantine-color-text": theme.colors["yoga-blue"][0],
-  },
-  dark: {
-    "--mantine-color-text": theme.colors["yoga-pink"][0],
-  },
-});
+// const resolver: CSSVariablesResolver = (theme) => ({
+//   variables: {
+//     "--mantine-color-text": theme.colors["yoga-blue"][0],
+//   },
+//   light: {
+//     "--mantine-color-text": theme.colors["yoga-blue"][0],
+//   },
+//   dark: {
+//     "--mantine-color-text": theme.colors["yoga-pink"][0],
+//   },
+// });
 
 export default async function LocaleLayout({ children, params }: Props) {
   const locale = (await params).locale;

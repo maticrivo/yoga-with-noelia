@@ -1,11 +1,12 @@
 "use client";
 
-import { useMemo } from "react";
+import { ReactNode, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import {
   Anchor,
   Paper,
   PaperProps,
+  SimpleGrid,
   Space,
   Stack,
   Text,
@@ -15,12 +16,14 @@ import {
 import { Link } from "@/i18n/routing";
 
 interface ClassCardProps extends PaperProps {
-  description: string | string[];
+  description?: string | string[];
+  image?: ReactNode;
   title?: string;
 }
 
 export default function ClassCard({
   description,
+  image,
   title,
   ...props
 }: ClassCardProps) {
@@ -47,11 +50,12 @@ export default function ClassCard({
             {title}
           </Title>
         ) : null}
-        <Stack align="start" flex={1} gap="xs">
-          {paragraphs.map((p, idx) => (
-            <Text key={+idx}>{p}</Text>
-          ))}
-        </Stack>
+        <SimpleGrid cols={{ base: 1, md: image ? 2 : 1 }}>
+          <Stack align="start" flex={1} gap="xs">
+            {paragraphs?.map?.((p, idx) => <Text key={+idx}>{p}</Text>)}
+          </Stack>
+          {image}
+        </SimpleGrid>
         <Space h="xl" />
         <Anchor
           c="yoga-blue"
