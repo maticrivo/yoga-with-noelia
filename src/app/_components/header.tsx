@@ -49,8 +49,8 @@ export function HeaderComponent() {
     xs: rem(28),
   });
   const subtitleFz = useMatches({
-    base: "lg",
-    xs: "xl",
+    base: "xs",
+    xs: "sm",
   });
   const gap = useMatches({
     base: 0,
@@ -124,17 +124,11 @@ export function HeaderComponent() {
         <Anchor component={Link} h="100%" href="#adult-yoga" underline="never">
           <Group align="center" gap="sm" h="100%">
             <YogaLogo c="yoga-blue" fill size={logoSize} strokeWidth={0} />
-            <Stack align="flex-end" gap={0}>
+            <Stack gap={0}>
               <Title fz={titleFz} order={1}>
                 {t("title")}
               </Title>
-              <Text
-                ff={theme.other.sloganFontFamily}
-                fw={theme.other.sloganFontWeight}
-                fz={subtitleFz}
-              >
-                {t("slogan")}
-              </Text>
+              <Text fz={subtitleFz}>{t("slogan")}</Text>
             </Stack>
           </Group>
         </Anchor>

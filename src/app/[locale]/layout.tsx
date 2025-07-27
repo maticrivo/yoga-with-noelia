@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Open_Sans, Parisienne } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
@@ -38,16 +38,6 @@ const Alta = localFont({
   ],
 });
 
-const GveretLevin = localFont({
-  src: [
-    {
-      path: "../../public/GveretLevinAlefAlefAlef-Regular.woff2",
-      style: "normal",
-      weight: "400",
-    },
-  ],
-});
-
 const Dorian = localFont({
   src: [
     {
@@ -56,12 +46,6 @@ const Dorian = localFont({
       weight: "400",
     },
   ],
-});
-
-const parisienne = Parisienne({
-  subsets: ["latin"],
-  display: "swap",
-  weight: "400",
 });
 
 const openSans = Open_Sans({
@@ -160,13 +144,6 @@ export default async function LocaleLayout({ children, params }: Props) {
                     "#bfa6ab",
                     "#bfa6ab",
                   ],
-                },
-                other: {
-                  sloganFontFamily:
-                    locale === "he"
-                      ? GveretLevin.style.fontFamily
-                      : parisienne.style.fontFamily,
-                  sloganFontWeight: "normal",
                 },
                 headings: {
                   fontFamily:
