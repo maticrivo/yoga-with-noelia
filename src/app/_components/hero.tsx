@@ -12,7 +12,7 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { IconArrowRight, IconSparkles } from "@tabler/icons-react";
+import { IconArrowRight } from "@tabler/icons-react";
 
 import { Link } from "@/i18n/routing";
 
@@ -29,7 +29,7 @@ export function HeroSection() {
         verticalSpacing="xl"
       >
         <Stack gap="lg" justify="center">
-          <Group gap="xs">
+          {/* <Group gap="xs">
             <IconSparkles
               color="var(--mantine-color-yoga-clay-7)"
               size={18}
@@ -44,7 +44,7 @@ export function HeroSection() {
             >
               {t("eyebrow")}
             </Text>
-          </Group>
+          </Group> */}
           <Title fz={{ base: 40, md: 60 }} lh={1.05} order={1}>
             {t("title")}
           </Title>

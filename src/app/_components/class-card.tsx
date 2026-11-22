@@ -32,7 +32,7 @@ export default function ClassCard({
     if (typeof description === "object") {
       return description;
     }
-    return [description];
+    return description ? description.split(/\n{2,}/) : [];
   }, [description]);
 
   return (
