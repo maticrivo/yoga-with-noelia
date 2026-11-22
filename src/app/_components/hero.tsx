@@ -16,7 +16,7 @@ import { IconArrowRight, IconSparkles } from "@tabler/icons-react";
 
 import { Link } from "@/i18n/routing";
 
-import foto from "../../public/new-hero.jpeg";
+import foto from "../../public/new-hero-sepia.jpg";
 
 export function HeroSection() {
   const t = useTranslations("Hero");
