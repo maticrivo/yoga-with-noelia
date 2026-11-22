@@ -17,7 +17,6 @@ import {
   Text,
   ThemeIcon,
   Title,
-  useMantineTheme,
   useMatches,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
@@ -37,7 +36,6 @@ export function HeaderComponent() {
   const [drawerOpened, { close: closeDrawer, toggle: toggleDrawer }] =
     useDisclosure(false);
   const t = useTranslations("Header");
-  const theme = useMantineTheme();
   const pathname = usePathname();
   const params = useParams();
   const logoSize = useMatches({
@@ -63,7 +61,7 @@ export function HeaderComponent() {
     (size: ButtonProps["size"] = "compact-xs") => (
       <>
         <Button
-          color="var(--mantine-color-text)"
+          color="yoga-ink"
           component={Link}
           href="#adult-yoga"
           size={size}
@@ -73,7 +71,7 @@ export function HeaderComponent() {
           {t("links.adult")}
         </Button>
         <Button
-          color="var(--mantine-color-text)"
+          color="yoga-ink"
           component={Link}
           href="#kid-yoga"
           size={size}
@@ -83,7 +81,7 @@ export function HeaderComponent() {
           {t("links.kid")}
         </Button>
         <Button
-          color="var(--mantine-color-text)"
+          color="yoga-ink"
           component={Link}
           href="#seminars"
           size={size}
@@ -93,7 +91,7 @@ export function HeaderComponent() {
           {t("links.seminars")}
         </Button>
         <Button
-          color="var(--mantine-color-text)"
+          color="yoga-ink"
           component={Link}
           href="#about"
           size={size}
@@ -103,7 +101,7 @@ export function HeaderComponent() {
           {t("links.about")}
         </Button>
         <Button
-          color="var(--mantine-color-text)"
+          color="yoga-ink"
           component={Link}
           href="#contact"
           size={size}
@@ -123,12 +121,14 @@ export function HeaderComponent() {
       <Group align="center" gap={gap} h="100%" justify="space-between">
         <Anchor component={Link} h="100%" href="#adult-yoga" underline="never">
           <Group align="center" gap="sm" h="100%">
-            <YogaLogo c="yoga-blue" fill size={logoSize} strokeWidth={0} />
+            <YogaLogo c="yoga-sage.8" fill size={logoSize} strokeWidth={0} />
             <Stack gap={0}>
-              <Title fz={titleFz} order={1}>
+              <Title fz={titleFz} order={2}>
                 {t("title")}
               </Title>
-              <Text fz={subtitleFz}>{t("slogan")}</Text>
+              <Text c="yoga-ink.7" fz={subtitleFz}>
+                {t("slogan")}
+              </Text>
             </Stack>
           </Group>
         </Anchor>
@@ -138,8 +138,9 @@ export function HeaderComponent() {
             <Menu.Target>
               <Button
                 // leftSection={<Text>{localeMapping[locale].flag}</Text>}
+                color="yoga-sage"
                 rightSection={
-                  <ThemeIcon c="yoga-blue" size="xs" variant="transparent">
+                  <ThemeIcon c="yoga-sage.8" size="xs" variant="transparent">
                     <IconChevronDown strokeWidth={1.5} />
                   </ThemeIcon>
                 }
@@ -165,7 +166,8 @@ export function HeaderComponent() {
           </Menu>
         </Group>
         <Burger
-          color="yoga-blue"
+          aria-label={t("menu")}
+          color="var(--mantine-color-yoga-ink-8)"
           hiddenFrom="md"
           opened={drawerOpened}
           onClick={toggleDrawer}
@@ -182,6 +184,9 @@ export function HeaderComponent() {
           body: {
             marginTop: rem(80),
           },
+          content: {
+            backgroundColor: "var(--mantine-color-yoga-sand-0)",
+          },
         }}
         withCloseButton={false}
         zIndex="calc(var(--mantine-z-index-app) / 2)"
@@ -192,7 +197,7 @@ export function HeaderComponent() {
             {routing.locales.map((l, idx) => (
               <Fragment key={`button.${l}`}>
                 <Button
-                  color="var(--mantine-color-text)"
+                  color="yoga-ink"
                   component={Link}
                   href={{ pathname }}
                   locale={l}

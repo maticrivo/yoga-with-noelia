@@ -3,10 +3,11 @@
 import { useTranslations } from "next-intl";
 import {
   Anchor,
-  Box,
+  Button,
   Center,
   Group,
   Paper,
+  SimpleGrid,
   Stack,
   Text,
   ThemeIcon,
@@ -21,21 +22,6 @@ import {
 
 export function ContactUsSection() {
   const t = useTranslations("Contact");
-  // const form = useForm({
-  //   mode: "uncontrolled",
-  //   initialValues: {
-  //     name: "",
-  //     email: "",
-  //     // phone: "",
-  //     message: "",
-  //   },
-  // });
-
-  // const handleSubmit = (values: typeof form.values) => {
-  //   window.open(
-  //     `https://wa.me/+972524242400?text=${encodeURIComponent(t("whatsappMessage", values))}`,
-  //   );
-  // };
 
   const items = [
     {
@@ -43,39 +29,44 @@ export function ContactUsSection() {
       description: "hola@yogawithnoelia.com",
       href: "mailto:hola@yogawithnoelia.com",
       icon: IconAt,
+      ltr: true,
     },
     {
       title: t("form.phone.label"),
       description: "+972-52-4242-400",
       href: "https://wa.me/+972524242400",
       icon: IconBrandWhatsapp,
+      ltr: true,
     },
     {
       title: t("follow", { brand: "Instagram" }),
       description: "yoga_with_noelia",
       href: "https://www.instagram.com/yoga_with_noelia/",
       icon: IconBrandInstagram,
+      ltr: true,
     },
     {
       title: t("follow", { brand: "YouTube" }),
       description: "yoga_with_noelia",
       href: "https://www.youtube.com/@yoga_with_noelia",
       icon: IconBrandYoutube,
+      ltr: true,
     },
-  ].map(({ description, href, icon: Icon, title }, index) => (
-    <Group key={+index} align="center" gap="xs">
-      <ThemeIcon c="yoga-pink" size="sm" variant="transparent">
-        <Icon size="100%" strokeWidth={1} />
+  ].map(({ description, href, icon: Icon, ltr, title }, index) => (
+    <Group key={+index} align="center" gap="sm" wrap="nowrap">
+      <ThemeIcon c="yoga-sage.8" radius="xl" size={40} variant="light">
+        <Icon size="60%" strokeWidth={1.5} />
       </ThemeIcon>
       <Stack gap={0}>
-        <Text c="yoga-pink" size="xs" visibleFrom="md">
+        <Text c="yoga-ink.7" size="xs">
           {title}
         </Text>
         <Anchor
-          c="yoga-pink"
-          dir="ltr"
+          c="yoga-ink.9"
+          dir={ltr ? "ltr" : undefined}
           href={href}
-          size="md"
+          rel="noopener noreferrer"
+          size="sm"
           target="_blank"
           underline="hover"
         >
@@ -88,70 +79,40 @@ export function ContactUsSection() {
   return (
     <Center>
       <Paper
-        bg="transparent"
-        p={0}
-        shadow="xs"
-        w={{ base: "100%", md: "50%" }}
-        // styles={{ root: { borderColor: "var(--mantine-color-yoga-blue-0)" } }}
-        // withBorder
+        bg="yoga-sage.0"
+        p={{ base: "lg", md: "xl" }}
+        radius="lg"
+        styles={{
+          root: { borderColor: "var(--mantine-color-yoga-sage-2)" },
+        }}
+        w={{ base: "100%", md: "75%" }}
+        withBorder
       >
-        {/* <Flex direction={{ base: "column-reverse", md: "row-reverse" }}> */}
-        <Box bg="yoga-blue" c="yoga-pink">
-          <Stack h="100%" justify="center" p="xl">
-            <Title c="yoga-pink" order={2}>
+        <Stack gap="lg">
+          <Stack align="center" gap="xs">
+            <Title order={2} ta="center">
               {t("title")}
             </Title>
-            {items}
+            <Text c="yoga-ink.7" maw={620} ta="center">
+              {t("description")}
+            </Text>
           </Stack>
-        </Box>
-        {/* <Box flex={1} p="xl">
-          <form
-            encType="text/plain"
-            method="post"
-            onSubmit={form.onSubmit(handleSubmit)}
-          >
-            <Stack>
-              <Title order={2} ta="center">
-                {t("title")}
-              </Title>
-              <Text>{t("description")}</Text>
-              <SimpleGrid cols={{ base: 1, md: 2 }}>
-                <TextInput
-                  label={t("form.name.label")}
-                  placeholder={t("form.name.placeholder")}
-                  required
-                  {...form.getInputProps("name")}
-                />
-                <TextInput
-                  label={t("form.email.label")}
-                  placeholder={t("form.email.placeholder")}
-                  required
-                  {...form.getInputProps("email")}
-                />
-              </SimpleGrid>
-
-              <Textarea
-                label={t("form.message.label")}
-                placeholder={t("form.message.placeholder")}
-                required
-                rows={4}
-                {...form.getInputProps("message")}
-              />
-
-              <Button
-                c="yoga-blue"
-                color="white"
-                ff="heading"
-                size="lg"
-                type="submit"
-                variant="light"
-              >
-                {t("form.send")}
-              </Button>
-            </Stack>
-          </form>
-        </Box> */}
-        {/* </Flex> */}
+          <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
+            {items}
+          </SimpleGrid>
+          <Center>
+            <Button
+              component="a"
+              href="https://wa.me/+972524242400"
+              leftSection={<IconBrandWhatsapp size={18} />}
+              rel="noopener noreferrer"
+              size="md"
+              target="_blank"
+            >
+              {t("cta")}
+            </Button>
+          </Center>
+        </Stack>
       </Paper>
     </Center>
   );

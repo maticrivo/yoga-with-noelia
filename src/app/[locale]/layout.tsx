@@ -66,20 +66,16 @@ export async function generateMetadata({
 
   return {
     title: t("title"),
+    description: t("description"),
   };
 }
 
-// const resolver: CSSVariablesResolver = (theme) => ({
-//   variables: {
-//     "--mantine-color-text": theme.colors["yoga-blue"][0],
-//   },
-//   light: {
-//     "--mantine-color-text": theme.colors["yoga-blue"][0],
-//   },
-//   dark: {
-//     "--mantine-color-text": theme.colors["yoga-pink"][0],
-//   },
-// });
+export function generateViewport() {
+  return {
+    width: "device-width",
+    initialScale: 1,
+  };
+}
 
 export default async function LocaleLayout({ children, params }: Props) {
   const locale = (await params).locale;
@@ -104,45 +100,61 @@ export default async function LocaleLayout({ children, params }: Props) {
       lang={locale}
       style={{ scrollBehavior: "smooth" }}
     >
-      <head>
-        <ColorSchemeScript />
-        <meta
-          content="width=device-width, initial-scale=1, maximum-scale=1"
-          name="viewport"
-        />
-      </head>
-
       <body>
+        <ColorSchemeScript />
         <NextIntlClientProvider messages={messages}>
           <DirectionProvider initialDirection={direction}>
             <MantineProvider
-              // cssVariablesResolver={resolver}
               defaultColorScheme="light"
               theme={createTheme({
                 colors: {
-                  "yoga-blue": [
-                    "#002441",
-                    "#002441",
-                    "#002441",
-                    "#002441",
-                    "#002441",
-                    "#002441",
-                    "#002441",
-                    "#002441",
-                    "#002441",
-                    "#002441",
+                  "yoga-sand": [
+                    "#fdfbf7",
+                    "#f8f3ea",
+                    "#f0e7d9",
+                    "#e7dbc8",
+                    "#ddceb6",
+                    "#d3c0a4",
+                    "#c8b292",
+                    "#bda380",
+                    "#b2956e",
+                    "#a7865c",
                   ],
-                  "yoga-pink": [
-                    "#bfa6ab",
-                    "#bfa6ab",
-                    "#bfa6ab",
-                    "#bfa6ab",
-                    "#bfa6ab",
-                    "#bfa6ab",
-                    "#bfa6ab",
-                    "#bfa6ab",
-                    "#bfa6ab",
-                    "#bfa6ab",
+                  "yoga-sage": [
+                    "#f2f7f3",
+                    "#e3efe6",
+                    "#c6decc",
+                    "#a6cbb1",
+                    "#8aba98",
+                    "#76ac87",
+                    "#68a37b",
+                    "#578f6b",
+                    "#497e5d",
+                    "#376b4c",
+                  ],
+                  "yoga-clay": [
+                    "#fcf3ef",
+                    "#f8e4db",
+                    "#f0c9b8",
+                    "#e8ac92",
+                    "#e19272",
+                    "#dc7e58",
+                    "#da7048",
+                    "#c15f37",
+                    "#ac532d",
+                    "#974424",
+                  ],
+                  "yoga-ink": [
+                    "#f4f6f5",
+                    "#e6eae8",
+                    "#cbd3cf",
+                    "#afbbb5",
+                    "#96a59e",
+                    "#81938a",
+                    "#71847b",
+                    "#5c6f66",
+                    "#4a5b53",
+                    "#2f4038",
                   ],
                 },
                 headings: {
@@ -153,49 +165,31 @@ export default async function LocaleLayout({ children, params }: Props) {
                   fontWeight: "normal",
                 },
                 fontFamily: openSans.style.fontFamily,
-                primaryColor: "yoga-blue",
+                primaryColor: "yoga-sage",
+                primaryShade: { dark: 6, light: 8 },
+                defaultRadius: "lg",
                 components: {
                   Button: {
                     defaultProps: {
-                      c: "primary",
-                      color: "primary",
                       fw: "normal",
+                      radius: "xl",
                     },
                   },
                   Divider: {
                     defaultProps: {
-                      color: "var(--mantine-primary-color-filled)",
+                      color: "var(--mantine-color-yoga-sand-3)",
                       size: "xs",
                     },
                   },
                   Text: {
                     defaultProps: {
-                      c: "yoga-blue",
-                      fw: "lighter",
+                      c: "yoga-ink.8",
+                      fw: "normal",
                     },
                   },
                   Title: {
                     defaultProps: {
-                      c: "yoga-blue",
-                    },
-                  },
-                  Input: {
-                    styles: {
-                      input: {
-                        color: "var(--mantine-color-yoga-blue-text)",
-                        fontWeight: "lighter",
-                      },
-                    },
-                  },
-                  InputWrapper: {
-                    styles: {
-                      label: {
-                        color: "var(--mantine-color-yoga-blue-text)",
-                        fontWeight: "lighter",
-                      },
-                      required: {
-                        color: "var(--mantine-color-yoga-blue-text)",
-                      },
+                      c: "yoga-ink.9",
                     },
                   },
                 },

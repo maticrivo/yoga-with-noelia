@@ -7,11 +7,11 @@ import {
   Paper,
   PaperProps,
   SimpleGrid,
-  Space,
   Stack,
   Text,
   Title,
 } from "@mantine/core";
+import { IconArrowRight } from "@tabler/icons-react";
 
 import { Link } from "@/i18n/routing";
 
@@ -37,34 +37,43 @@ export default function ClassCard({
 
   return (
     <Paper
-      bg="transparent"
-      p="xl"
-      shadow="xs"
-      styles={{ root: { borderColor: "var(--mantine-color-yoga-blue-0)" } }}
+      bg="white"
+      className="yoga-card"
+      p={{ base: "lg", md: "xl" }}
+      radius="lg"
+      styles={{ root: { borderColor: "var(--mantine-color-yoga-sand-3)" } }}
       withBorder
       {...props}
     >
-      <Stack align="center" gap="md" h="100%">
-        {title ? (
-          <Title order={3} ta="center">
-            {title}
-          </Title>
-        ) : null}
-        <SimpleGrid cols={{ base: 1, md: image ? 2 : 1 }}>
-          <Stack align="start" flex={1} gap="xs">
-            {paragraphs?.map?.((p, idx) => <Text key={+idx}>{p}</Text>)}
-          </Stack>
-          {image}
-        </SimpleGrid>
-        <Space h="xl" />
-        <Anchor
-          c="yoga-blue"
-          component={Link}
-          href="#contact"
-          size="sm"
-          underline="always"
-        >
-          {t("reserve")}
+      <Stack gap="md" h="100%" justify="space-between">
+        <Stack gap="md">
+          {title ? (
+            <Title fz="h4" order={3}>
+              {title}
+            </Title>
+          ) : null}
+          <SimpleGrid
+            cols={{ base: 1, md: image ? 2 : 1 }}
+            spacing="lg"
+            verticalSpacing="md"
+          >
+            <Stack gap="sm">
+              {paragraphs?.map?.((p, idx) => (
+                <Text key={+idx} c="yoga-ink.7" fz={{ base: "md", md: "sm" }}>
+                  {p}
+                </Text>
+              ))}
+            </Stack>
+            {image}
+          </SimpleGrid>
+        </Stack>
+        <Anchor c="yoga-sage.8" component={Link} href="#contact" size="sm">
+          {t("reserve")}{" "}
+          <IconArrowRight
+            size={14}
+            strokeWidth={1.5}
+            style={{ verticalAlign: "middle" }}
+          />
         </Anchor>
       </Stack>
     </Paper>

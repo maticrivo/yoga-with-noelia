@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { SimpleGrid, Stack, Title } from "@mantine/core";
+import { SimpleGrid, Stack, Text, Title } from "@mantine/core";
 
 import ClassCard from "./class-card";
 
@@ -8,10 +8,15 @@ export function SeminariosSection() {
   const keys = ["1"] as const;
 
   return (
-    <Stack>
-      <Title order={2} ta="center">
-        {t("title")}
-      </Title>
+    <Stack gap="lg">
+      <Stack align="center" gap="xs">
+        <Title order={2} ta="center">
+          {t("title")}
+        </Title>
+        <Text c="yoga-ink.7" maw={640} ta="center">
+          {t("intro")}
+        </Text>
+      </Stack>
       <SimpleGrid cols={{ base: 1 }}>
         {keys.map((key) => (
           <ClassCard

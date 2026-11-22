@@ -1,6 +1,7 @@
 {
   "Metadata": {
-    "title": "Yoga con Noelia"
+    "title": "Yoga con Noelia",
+    "description": "Yoga somático para todas las personas. No hace falta ser flexible: la flexibilidad se aprende y el movimiento consciente calma el sistema nervioso."
   },
   "Header": {
     "title": "Yoga con Noelia",
@@ -11,15 +12,46 @@
       "seminars": "Seminarios",
       "about": "Sobre Mí",
       "contact": "Contacto"
-    }
+    },
+    "menu": "Abrir menú"
   },
   "Footer": {
     "copyright": "© 2025 Yoga con Noelia. Todos los derechos reservados."
   },
+  "Hero": {
+    "eyebrow": "Yoga somático · Para todas las personas",
+    "title": "El yoga es para todas las personas",
+    "description": "No hace falta ser flexible para empezar. La flexibilidad no es un requisito: se aprende. Y cuando el movimiento se vuelve lento y consciente, el sistema nervioso encuentra calma.",
+    "primaryCta": "Reserva tu primera clase",
+    "secondaryCta": "Conoce las clases",
+    "trust": "+5 años enseñando · 500 RYT · ISYOGA",
+    "imageAlt": "Noelia, profesora de yoga"
+  },
+  "Principles": {
+    "title": "Empieza donde estás",
+    "subtitle": "No importa tu edad, tu cuerpo ni tu experiencia previa. <br></br>La práctica se adapta a ti.",
+    "1": {
+      "title": "No necesitas ser flexible",
+      "description": "Empiezas exactamente donde está tu cuerpo hoy. Sin posturas imposibles ni exigencias: El cuerpo se adapta, no se fuerza."
+    },
+    "2": {
+      "title": "La flexibilidad se aprende",
+      "description": "Con respiración, repetición y paciencia, el rango de movimiento se abre solo. No es un punto de partida: Es un camino."
+    },
+    "3": {
+      "title": "El movimiento somático calma",
+      "description": "Movimientos lentos y conscientes regulan el sistema nervioso, reducen el estrés y devuelven la sensación de calma."
+    }
+  },
+  "Quote": {
+    "text": "La práctica no se trata de llegar a un resultado sino de volver a habitar el cuerpo.",
+    "author": "Noelia"
+  },
   "About": {
     "title": "Sobre Mí",
+    "imageAlt": "Noelia",
     "messages": {
-      "1": "Mi nombre es Noelia, nací en Buenos Aires y desde hace mas de 10 años vivo en Israel.",
+      "1": "Mi nombre es Noelia, nací en Buenos Aires y desde hace mas de 15 años vivo en Israel.",
       "2": "Practico yoga desde 2016, explorando diferentes metodologías y aprendiendo de diversos maestros. Con el tiempo, esta disciplina me ha brindado una profunda sensación de calma y conexión conmigo misma, una experiencia transformadora que me llevó a profundizar en su estudio y enseñanza.",
       "3": "Mi objetivo es poder llevar y transmitir la practica de yoga a la mayor cantidad de gente que quiera incursionar en la practica.",
       "4": "Formación",
@@ -27,12 +59,13 @@
       "6": "2020-2022 - 500 RYT Profesora de Yoga Ashtanga Vinyasa | OMYoga con Shani Sharon, Raanana.",
       "7": "2022-2023 - Asistente en curso para maestros de yoga | OMYoga.",
       "8": "2020 - Actualidad - Miembro de la Asociación Israelí de Yoga (ISYOGA).",
-      "9": "2024 - 2005 - Guía en Vinculación Corporal - Diplomado de Vinculación Corporal y Movimiento Somático | EastWest Somatics Institute con Ashley Meeder."
+      "9": "2024 - 2025 - Guía en Vinculación Corporal - Diplomado de Vinculación Corporal y Movimiento Somático | EastWest Somatics Institute con Ashley Meeder."
     }
   },
   "Contact": {
     "title": "Contacto",
     "description": "Si quieres inscribirte, recibir más información sobre clases individuales, unirte a un grupo presencial o por Zoom, o conocer más sobre un evento específico, envíame un mensaje con tu número de teléfono y te contactaré a la brevedad.",
+    "cta": "Escríbeme por WhatsApp",
     "follow": "Follow me on {brand}",
     "whatsappMessage": "{message}\n\n{name} - {email}.",
     "form": {
@@ -60,6 +93,7 @@
   },
   "AdultYoga": {
     "title": "Yoga para Adultos",
+    "intro": "Clases adaptadas a principiantes y a quienes sienten que su cuerpo «no es flexible». Trabajamos a tu ritmo, con respiración, apoyos y movimiento consciente.",
     "1": {
       "title": "Vinyasa Ashtanga clásica",
       "description": "Esta clase está pensada para trabajar el método de yoga Ashtanga Vinyasa, para principiantes. El Ashtanga yoga es una excelente forma de desarrollar fuerza física y flexibilidad. La práctica implica una serie de posturas que trabajan todos los grupos musculares del cuerpo, incluidos el pecho, los brazos, las piernas y los glúteos, todos los movimientos son guiados a través de la respiración."
@@ -79,6 +113,7 @@
   },
   "KidYoga": {
     "title": "Yoga para Niños",
+    "intro": "Jugar, moverse y respirar. El yoga llega a la infancia a través de la música, el juego y la curiosidad.",
     "1": {
       "title": "Metodología KAY",
       "description": "Se basa en tres pilares fundamentales: Música: Las clases incorporan canciones que acompañan los movimientos, ayudando a los niños a disfrutar de la práctica y a mejorar su concentración. Movimiento: El yoga se presenta de manera lúdica y creativa, usando juegos y ejercicios que permiten a los niños explorar su cuerpo y emociones. Curiosidad y Mindfulness: Se fomenta el desarrollo de la conciencia emocional,reconociendo y gestionando las emociones a través de prácticas de mindfulness adaptadas a su edad."
@@ -90,6 +125,7 @@
   },
   "Seminars": {
     "title": "Seminarios y Eventos especiales",
+    "intro": "Encuentros para profundizar, practicar y compartir en grupo.",
     "1": {
       "title": "",
       "description": "Los seminarios son experiencias enriquecedoras diseñadas para profundizar un tema en particular en la práctica y filosofía del yoga. Exploramos posturas, técnicas de respiración, meditación y movimiento somatico. Estos encuentros son ideales tanto para principiantes como para practicantes avanzados que desean ampliar su conocimiento y profundizar su práctica para conectar más profundamente con su cuerpo y mente."

@@ -6,9 +6,12 @@ import { Locale } from "@/i18n/routing";
 import { AboutSection } from "../_components/about";
 import { AdultYogaSection } from "../_components/adult-yoga";
 import { ContactUsSection } from "../_components/contact";
+import { HeroSection } from "../_components/hero";
 import { KidYogaSection } from "../_components/kid-yoga";
 import LotusIcon from "../_components/lotus-icon";
 import PageLayout from "../_components/page-layout";
+import { PrinciplesSection } from "../_components/principles";
+import { QuoteSection } from "../_components/quote";
 import { SeminariosSection } from "../_components/seminarios";
 
 type Props = {
@@ -21,51 +24,52 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <>
-      <span id="adult-yoga" />
-      <PageLayout>
-        <Stack gap="xl">
-          <AppShellSection component="section">
-            <AdultYogaSection />
-          </AppShellSection>
-          <Divider
-            id="kid-yoga"
-            label={<LotusIcon c="primary" fill size="md" strokeWidth={1} />}
-            labelPosition="center"
-            my="xl"
-          />
-          <AppShellSection component="section">
-            <KidYogaSection />
-          </AppShellSection>
-          <Divider
-            id="seminars"
-            label={<LotusIcon c="primary" fill size="md" strokeWidth={1} />}
-            labelPosition="center"
-            my="xl"
-          />
-          <AppShellSection component="section">
-            <SeminariosSection />
-          </AppShellSection>
-          <Divider
-            id="about"
-            label={<LotusIcon c="primary" fill size="md" strokeWidth={1} />}
-            labelPosition="center"
-            my="xl"
-          />
-          <AppShellSection component="section">
-            <AboutSection />
-          </AppShellSection>
-          <Divider
-            id="contact"
-            label={<LotusIcon c="primary" fill size="md" strokeWidth={1} />}
-            labelPosition="center"
-            my="xl"
-          />
-          <AppShellSection component="section">
-            <ContactUsSection />
-          </AppShellSection>
-        </Stack>
-      </PageLayout>
-    </>
+    <PageLayout>
+      <Stack gap="xl">
+        <HeroSection />
+        <PrinciplesSection />
+        <QuoteSection />
+        <Divider
+          label={<LotusIcon c="yoga-sage.6" fill size="md" strokeWidth={1} />}
+          labelPosition="center"
+          my="md"
+        />
+        <AppShellSection component="section" id="adult-yoga">
+          <AdultYogaSection />
+        </AppShellSection>
+        <Divider
+          label={<LotusIcon c="yoga-sage.6" fill size="md" strokeWidth={1} />}
+          labelPosition="center"
+          my="md"
+        />
+        <AppShellSection component="section" id="kid-yoga">
+          <KidYogaSection />
+        </AppShellSection>
+        <Divider
+          label={<LotusIcon c="yoga-sage.6" fill size="md" strokeWidth={1} />}
+          labelPosition="center"
+          my="md"
+        />
+        <AppShellSection component="section" id="seminars">
+          <SeminariosSection />
+        </AppShellSection>
+        <Divider
+          label={<LotusIcon c="yoga-sage.6" fill size="md" strokeWidth={1} />}
+          labelPosition="center"
+          my="md"
+        />
+        <AppShellSection component="section" id="about">
+          <AboutSection />
+        </AppShellSection>
+        <Divider
+          label={<LotusIcon c="yoga-sage.6" fill size="md" strokeWidth={1} />}
+          labelPosition="center"
+          my="md"
+        />
+        <AppShellSection component="section" id="contact">
+          <ContactUsSection />
+        </AppShellSection>
+      </Stack>
+    </PageLayout>
   );
 }
