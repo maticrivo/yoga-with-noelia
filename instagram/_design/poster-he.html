@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Yoga con Noelia — Postales en hebreo</title>
+    <style>
+      @font-face {
+        font-family: "Dorian";
+        src: url("../../src/public/DorianCLM.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      :root {
+        --sand-0: #fdfbf7;
+        --sand-1: #f8f3ea;
+        --sand-2: #f0e7d9;
+        --sand-3: #e7dbc8;
+        --sage-2: #dcebe0;
+        --sage-5: #76ac87;
+        --sage-6: #68a37b;
+        --sage-7: #578f6b;
+        --sage-8: #497e5d;
+        --clay-6: #da7048;
+        --clay-7: #c15f37;
+        --ink-7: #5c6f66;
+        --ink-8: #4a5b53;
+        --ink-9: #2f4038;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 3240px;
+        height: 2700px;
+        margin: 0;
+        padding: 0;
+        background: var(--sand-1);
+      }
+
+      body {
+        color: var(--ink-9);
+        font-family: "Helvetica Neue", "Arial Hebrew", Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .sheet {
+        display: grid;
+        width: 3240px;
+        height: 2700px;
+        direction: ltr;
+        grid-template-columns: repeat(3, 1080px);
+        grid-template-rows: repeat(2, 1350px);
+      }
+
+      .slide {
+        position: relative;
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        direction: rtl;
+        text-align: right;
+        background:
+          radial-gradient(
+            1200px 900px at 100% 0%,
+            rgba(198, 222, 204, 0.34),
+            rgba(198, 222, 204, 0) 62%
+          ),
+          radial-gradient(
+            900px 700px at 0% 100%,
+            rgba(240, 201, 184, 0.26),
+            rgba(240, 201, 184, 0) 64%
+          ),
+          var(--sand-1);
+      }
+
+      .slide::after {
+        position: absolute;
+        z-index: 40;
+        inset: 0;
+        opacity: 0.055;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/></svg>");
+        content: "";
+      }
+
+      /* 01 · Marca */
+      .brand-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 84px 88px 78px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .lotus {
+        display: block;
+        width: 66px;
+        height: 66px;
+        flex: none;
+        background: var(--sage-7);
+        -webkit-mask: url("../../src/app/icon.svg") no-repeat center / contain;
+        mask: url("../../src/app/icon.svg") no-repeat center / contain;
+      }
+
+      .wordmark {
+        color: var(--ink-9);
+        font-family: "Dorian", serif;
+        font-size: 35px;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        line-height: 1;
+      }
+
+      .brand-copy {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        padding: 28px 0;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 24px;
+        color: var(--clay-7);
+        font-family: "Helvetica Neue", "Arial Hebrew", Helvetica, Arial, sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 0.12em;
+        line-height: 1;
+      }
+
+      .sparkle {
+        width: 26px;
+        height: 26px;
+        flex: none;
+      }
+
+      h1 {
+        margin: 0;
+        color: var(--ink-9);
+        font-family: "Dorian", serif;
+        font-size: 88px;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        line-height: 1.03;
+      }
+
+      h1 .accent {
+        color: var(--clay-6);
+      }
+
+      .lede {
+        max-width: 790px;
+        margin: 30px 0 0;
+        color: var(--ink-7);
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.6;
+      }
+
+      .brand-trust {
+        margin-top: 40px;
+        color: var(--ink-7);
+        font-family: "Helvetica Neue", "Arial Hebrew", Helvetica, Arial, sans-serif;
+        font-size: 19px;
+        font-weight: 300;
+        letter-spacing: 0.07em;
+        line-height: 1.4;
+      }
+
+      .brand-foot {
+        padding-top: 24px;
+        border-top: 1px solid var(--sand-3);
+        color: var(--ink-7);
+        font-family: "Helvetica Neue", "Arial Hebrew", Helvetica, Arial, sans-serif;
+        font-size: 19px;
+        font-weight: 300;
+        letter-spacing: 0.07em;
+        line-height: 1.5;
+      }
+
+      .sign {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 12px;
+        color: var(--clay-7);
+        font-family: "Dorian", serif;
+        font-size: 32px;
+        line-height: 1;
+      }
+
+      .sign::before {
+        display: block;
+        width: 42px;
+        height: 1px;
+        background: var(--clay-6);
+        content: "";
+      }
+
+      /* 02 · Hero */
+      .photo-frame {
+        position: absolute;
+        top: 64px;
+        right: 64px;
+        width: 952px;
+        height: 952px;
+      }
+
+      .photo {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        border-radius: 46px;
+        box-shadow: 0 26px 60px rgba(47, 64, 56, 0.14);
+      }
+
+      .photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-photo img {
+        object-position: center 32%;
+        filter: contrast(1.03);
+      }
+
+      .hero-caption {
+        position: absolute;
+        top: 1050px;
+        right: 64px;
+        left: 64px;
+      }
+
+      .hero-label {
+        display: block;
+        color: var(--sage-8);
+        font-family: "Helvetica Neue", "Arial Hebrew", Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        letter-spacing: 0.07em;
+        line-height: 1.3;
+      }
+
+      .hero-cta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 16px;
+        color: var(--ink-9);
+        font-family: "Dorian", serif;
+        font-size: 48px;
+        line-height: 1.1;
+      }
+
+      .hero-cta svg {
+        width: 30px;
+        height: 30px;
+        flex: none;
+        color: var(--clay-6);
+      }
+
+      .hero-note {
+        display: block;
+        margin-top: 18px;
+        color: var(--ink-7);
+        font-size: 26px;
+        line-height: 1.5;
+      }
+
+      /* 03 · Sobre mí */
+      .portrait-wrap {
+        position: absolute;
+        top: 72px;
+        left: 90px;
+        width: 900px;
+        height: 900px;
+      }
+
+      .portrait {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        border-radius: 450px 450px 36px 36px;
+        box-shadow: 0 24px 54px rgba(47, 64, 56, 0.14);
+      }
+
+      .portrait img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 16%;
+      }
+
+      .portrait-meta {
+        position: absolute;
+        top: 1020px;
+        right: 88px;
+        left: 88px;
+      }
+
+      .portrait-eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 14px;
+        color: var(--clay-7);
+        font-family: "Helvetica Neue", "Arial Hebrew", Helvetica, Arial, sans-serif;
+        font-size: 17px;
+        letter-spacing: 0.12em;
+        line-height: 1;
+      }
+
+      .portrait-eyebrow::before {
+        display: block;
+        width: 42px;
+        height: 3px;
+        background: var(--clay-6);
+        content: "";
+      }
+
+      .portrait-name {
+        margin: 0;
+        color: var(--ink-9);
+        font-family: "Dorian", serif;
+        font-size: 66px;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        line-height: 1;
+      }
+
+      .latin {
+        unicode-bidi: isolate;
+      }
+
+      .portrait-creds {
+        margin: 12px 0 0;
+        color: var(--ink-7);
+        font-family: "Helvetica Neue", "Arial Hebrew", Helvetica, Arial, sans-serif;
+        font-size: 19px;
+        font-weight: 300;
+        letter-spacing: 0.06em;
+        line-height: 1.45;
+      }
+
+      .portrait-quote {
+        position: absolute;
+        right: 88px;
+        bottom: 90px;
+        left: 88px;
+        margin: 0;
+        padding-top: 22px;
+        border-top: 1px solid var(--sand-3);
+        color: var(--clay-7);
+        font-family: "Dorian", serif;
+        font-size: 40px;
+        line-height: 1.25;
+      }
+
+      /* 04–06 · Clases */
+      .class-slide {
+        padding: 72px;
+      }
+
+      .class-photo {
+        position: relative;
+        width: 936px;
+        height: 800px;
+        overflow: hidden;
+        border-radius: 46px;
+        box-shadow: 0 22px 46px rgba(47, 64, 56, 0.12);
+      }
+
+      .class-photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .class-title {
+        margin: 38px 0 0;
+        color: var(--ink-9);
+        font-family: "Dorian", serif;
+        font-size: 66px;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        line-height: 1.03;
+      }
+
+      .class-copy {
+        max-width: 900px;
+        margin: 16px 0 0;
+        color: var(--ink-7);
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      .class-cta {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 36px;
+        color: var(--clay-7);
+        font-family: "Helvetica Neue", "Arial Hebrew", Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        letter-spacing: 0.02em;
+        line-height: 1;
+      }
+
+      .class-cta svg {
+        width: 24px;
+        height: 24px;
+        flex: none;
+        color: var(--clay-6);
+      }
+
+      .accent-rule {
+        position: absolute;
+        right: 88px;
+        bottom: 90px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--sage-7);
+        font-family: "Helvetica Neue", "Arial Hebrew", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.08em;
+      }
+
+      .accent-rule::before {
+        display: block;
+        width: 34px;
+        height: 1px;
+        background: var(--sage-5);
+        content: "";
+      }
+    </style>
+  </head>
+  <body>
+    <main class="sheet">
+      <!-- 01 · MARCA -->
+      <section class="slide brand-slide">
+        <div class="brand">
+          <span class="lotus"></span>
+          <span class="wordmark">יוגה עם נואליה</span>
+        </div>
+
+        <div class="brand-copy">
+          <div class="eyebrow">
+            <svg
+              class="sparkle"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 3c.7 4.6 3.7 7.6 8.3 8.3-4.6.7-7.6 3.7-8.3 8.3-.7-4.6-3.7-7.6-8.3-8.3C8.3 10.6 11.3 7.6 12 3Z" />
+            </svg>
+            יוגה סומטית
+          </div>
+          <h1>היוגה — תרגול<br /><span class="accent">אפשרי לכולם</span></h1>
+          <p class="lede">
+            לא צריך ניסיון או לעמוד בתנאים מסוימים כדי להתחיל. דרך הגוף,
+            הנשימה והתנועה, כל אחת ואחד יכולים למצוא את הדרך שלהם לתרגל.
+          </p>
+          <div class="brand-trust">
+            מעל 5 שנות הוראה · <span class="latin" dir="ltr">500 RYT · ISYOGA</span>
+          </div>
+        </div>
+
+        <div class="brand-foot">
+          מבוגרים · גיל הזהב · ילדים · השתלמויות
+          <span class="sign">נואליה</span>
+        </div>
+      </section>
+
+      <!-- 02 · HERO -->
+      <section class="slide">
+        <div class="photo-frame">
+          <div class="photo hero-photo">
+            <img src="../../src/public/new-hero-sepia.jpg" alt="" />
+          </div>
+        </div>
+        <div class="hero-caption">
+          <span class="hero-label">שיעורים בקבוצה · פרונטלי ובזום</span>
+          <span class="hero-cta">
+            שריינו את השיעור הראשון
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 12H5" />
+              <path d="m11 6-6 6 6 6" />
+            </svg>
+          </span>
+          <span class="hero-note">מרחב להתנועע בקצב שלכם.</span>
+        </div>
+      </section>
+
+      <!-- 03 · SOBRE MÍ -->
+      <section class="slide">
+        <div class="portrait-wrap">
+          <div class="portrait">
+            <img src="../../src/public/noelia-hero.jpg" alt="" />
+          </div>
+        </div>
+        <div class="portrait-meta">
+          <div class="portrait-eyebrow">עליי</div>
+          <h2 class="portrait-name">נואליה</h2>
+          <p class="portrait-creds">מורת יוגה · <span class="latin" dir="ltr">500 RYT · ISYOGA</span></p>
+        </div>
+        <p class="portrait-quote">הגמישות נלמדת.</p>
+      </section>
+
+      <!-- 04 · ASHTANGA -->
+      <section class="slide class-slide">
+        <div class="class-photo">
+          <img src="../source/real-ashtanga.jpg" alt="" />
+        </div>
+        <h2 class="class-title">ויניאסה אשטנגה</h2>
+        <p class="class-copy">
+          תרגול דינמי המבוסס על עקרונות שיטת אשטנגה ויניאסה, שבו התנוחות
+          מתחברות זו לזו דרך הנשימה, ברצף מתקדם.
+        </p>
+        <span class="class-cta">שריינו את מקומכם <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H5" /><path d="m11 6-6 6 6 6" /></svg></span>
+        <span class="accent-rule">כוח · נשימה</span>
+      </section>
+
+      <!-- 05 · FLOW -->
+      <section class="slide class-slide">
+        <div class="class-photo">
+          <img src="../source/real-flow.jpg" alt="" />
+        </div>
+        <h2 class="class-title">ויניאסה פלואו</h2>
+        <p class="class-copy">
+          תנועה ונשימה ברצפים זורמים שמשתנים בכל שיעור. אידיאלי להתחלה.
+        </p>
+        <span class="class-cta">שריינו את מקומכם <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H5" /><path d="m11 6-6 6 6 6" /></svg></span>
+        <span class="accent-rule">זרימה · נוכחות</span>
+      </section>
+
+      <!-- 06 · SOMÁTICO -->
+      <section class="slide class-slide">
+        <div class="class-photo">
+          <img src="../source/real-somatico.jpg" alt="" />
+        </div>
+        <h2 class="class-title">קשר גוף־תנועה</h2>
+        <p class="class-copy">
+          גישה של תנועה סומטית לשכון בגוף, לשחרור מתחים ולהרגעת מערכת העצבים.
+        </p>
+        <span class="class-cta">שריינו את מקומכם <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H5" /><path d="m11 6-6 6 6 6" /></svg></span>
+        <span class="accent-rule">רוגע · מודעות</span>
+      </section>
+    </main>
+  </body>
+</html>

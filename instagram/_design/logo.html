@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Yoga con Noelia — Avatar de Instagram</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 2160px;
+        height: 2160px;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: grid;
+        grid-template-columns: 1080px 1080px;
+        grid-template-rows: 1080px 1080px;
+      }
+
+      .avatar {
+        position: relative;
+        display: grid;
+        width: 1080px;
+        height: 1080px;
+        place-items: center;
+      }
+
+      .lotus {
+        display: block;
+        width: 500px;
+        height: 500px;
+        -webkit-mask: url("../../src/app/icon.svg") no-repeat center / contain;
+        mask: url("../../src/app/icon.svg") no-repeat center / contain;
+      }
+
+      .sage-cream {
+        background: radial-gradient(circle at 32% 26%, #7cb28b 0%, #68a37b 58%, #5d9570 100%);
+      }
+
+      .sage-cream .lotus {
+        background: #fdfbf7;
+      }
+
+      .sand-sage {
+        background: radial-gradient(circle at 32% 26%, #fffdf9 0%, #f8f3ea 60%, #f0e7d9 100%);
+      }
+
+      .sand-sage .lotus {
+        background: #578f6b;
+      }
+
+      .ink-sage {
+        background: radial-gradient(circle at 32% 26%, #3c5148 0%, #2f4038 65%, #26342e 100%);
+      }
+
+      .ink-sage .lotus {
+        background: #8aba98;
+      }
+
+      .sage-disc {
+        background: radial-gradient(circle at 32% 26%, #7cb28b 0%, #68a37b 58%, #5d9570 100%);
+      }
+
+      .sage-disc .disc {
+        display: grid;
+        width: 760px;
+        height: 760px;
+        border-radius: 50%;
+        background: #fdfbf7;
+        place-items: center;
+      }
+
+      .sage-disc .lotus {
+        width: 440px;
+        height: 440px;
+        background: #578f6b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="avatar sage-cream"><span class="lotus"></span></div>
+    <div class="avatar sand-sage"><span class="lotus"></span></div>
+    <div class="avatar ink-sage"><span class="lotus"></span></div>
+    <div class="avatar sage-disc"><span class="disc"><span class="lotus"></span></span></div>
+  </body>
+</html>

@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Yoga con Noelia — Mosaico Instagram</title>
+    <style>
+      @font-face {
+        font-family: "Dorian";
+        src: url("../../src/public/DorianCLM.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: "Alta";
+        src: url("../../src/public/Alta_regular.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: "Alta";
+        src: url("../../src/public/Alta_light.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 300;
+      }
+
+      :root {
+        --sand-0: #fdfbf7;
+        --sand-1: #f8f3ea;
+        --sand-2: #f0e7d9;
+        --sand-3: #e7dbc8;
+        --sage-1: #f2f7f3;
+        --sage-2: #dcebe0;
+        --sage-5: #76ac87;
+        --sage-6: #68a37b;
+        --sage-7: #578f6b;
+        --sage-8: #497e5d;
+        --clay-3: #f0c9b8;
+        --clay-6: #da7048;
+        --clay-7: #c15f37;
+        --ink-7: #5c6f66;
+        --ink-8: #4a5b53;
+        --ink-9: #2f4038;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 3240px;
+        height: 2700px;
+        margin: 0;
+        padding: 0;
+        background: var(--sand-1);
+      }
+
+      body {
+        color: var(--ink-9);
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .poster {
+        position: relative;
+        width: 3240px;
+        height: 2700px;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            1400px 1100px at 4% 0%,
+            rgba(198, 222, 204, 0.34),
+            rgba(198, 222, 204, 0) 62%
+          ),
+          radial-gradient(
+            1200px 900px at 100% 100%,
+            rgba(240, 201, 184, 0.3),
+            rgba(240, 201, 184, 0) 64%
+          ),
+          var(--sand-1);
+      }
+
+      .poster::before {
+        position: absolute;
+        top: -820px;
+        left: -700px;
+        width: 1680px;
+        height: 1680px;
+        border: 2px solid rgba(104, 163, 123, 0.18);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .grain {
+        position: absolute;
+        z-index: 40;
+        inset: 0;
+        opacity: 0.055;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/></svg>");
+      }
+
+      .tile {
+        position: absolute;
+        width: 1080px;
+        height: 1350px;
+      }
+
+      .t1 {
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 84px 88px 78px;
+      }
+
+      .t2 {
+        top: 0;
+        left: 1080px;
+      }
+
+      .t3 {
+        top: 0;
+        left: 2160px;
+      }
+
+      .t4 {
+        top: 1350px;
+        left: 0;
+      }
+
+      .t5 {
+        top: 1350px;
+        left: 1080px;
+      }
+
+      .t6 {
+        top: 1350px;
+        left: 2160px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .lotus {
+        display: block;
+        width: 66px;
+        height: 66px;
+        background: var(--sage-7);
+        -webkit-mask: url("../../src/app/icon.svg") no-repeat center / contain;
+        mask: url("../../src/app/icon.svg") no-repeat center / contain;
+      }
+
+      .wordmark {
+        color: var(--ink-9);
+        font-family: "Alta", "Helvetica Neue", sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+        letter-spacing: 0.24em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .hero-copy {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        padding: 28px 0;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 24px;
+        color: var(--clay-7);
+        font-family: "Alta", "Helvetica Neue", sans-serif;
+        font-size: 23px;
+        letter-spacing: 0.2em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .sparkle {
+        width: 26px;
+        height: 26px;
+        flex: none;
+      }
+
+      h1 {
+        max-width: 900px;
+        margin: 0;
+        color: var(--ink-9);
+        font-family: "Dorian", Georgia, serif;
+        font-size: 88px;
+        font-weight: 400;
+        letter-spacing: -0.012em;
+        line-height: 1.03;
+      }
+
+      h1 .accent {
+        color: var(--clay-6);
+      }
+
+      .lede {
+        max-width: 760px;
+        margin: 30px 0 0;
+        color: var(--ink-7);
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.55;
+      }
+
+      .t1-trust {
+        margin-top: 40px;
+        color: var(--ink-7);
+        font-family: "Alta", "Helvetica Neue", sans-serif;
+        font-size: 19px;
+        font-weight: 300;
+        letter-spacing: 0.14em;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+
+      .t1-foot {
+        padding-top: 24px;
+        border-top: 1px solid var(--sand-3);
+        color: var(--ink-7);
+        font-family: "Alta", "Helvetica Neue", sans-serif;
+        font-size: 19px;
+        font-weight: 300;
+        letter-spacing: 0.16em;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+
+      .t1-sign {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 12px;
+        color: var(--clay-7);
+        font-family: "Dorian", Georgia, serif;
+        font-size: 30px;
+        font-style: normal;
+        letter-spacing: 0.01em;
+      }
+
+      .t1-sign::before {
+        display: block;
+        width: 42px;
+        height: 1px;
+        background: var(--clay-6);
+        content: "";
+      }
+
+      .photo-frame {
+        position: absolute;
+        top: 64px;
+        left: 64px;
+        width: 952px;
+        height: 952px;
+      }
+
+      .photo {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        border-radius: 46px;
+        box-shadow: 0 26px 60px rgba(47, 64, 56, 0.14);
+      }
+
+      .photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-photo img {
+        object-position: center 32%;
+        filter: contrast(1.03);
+      }
+
+      .hero-caption {
+        position: absolute;
+        top: 1050px;
+        right: 64px;
+        left: 64px;
+      }
+
+      .hero-label {
+        display: block;
+        color: var(--sage-8);
+        font-family: "Alta", "Helvetica Neue", sans-serif;
+        font-size: 20px;
+        letter-spacing: 0.16em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .hero-cta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 16px;
+        color: var(--ink-9);
+        font-family: "Dorian", Georgia, serif;
+        font-size: 52px;
+        line-height: 1.1;
+      }
+
+      .hero-cta svg {
+        width: 32px;
+        height: 32px;
+        flex: none;
+        color: var(--clay-6);
+      }
+
+      .hero-note {
+        display: block;
+        margin-top: 18px;
+        color: var(--ink-7);
+        font-size: 26px;
+        line-height: 1.5;
+      }
+
+      .portrait-wrap {
+        position: absolute;
+        top: 72px;
+        left: 90px;
+        width: 900px;
+        height: 900px;
+      }
+
+      .portrait {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        border-radius: 450px 450px 36px 36px;
+        box-shadow: 0 24px 54px rgba(47, 64, 56, 0.14);
+      }
+
+      .portrait img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 16%;
+      }
+
+      .portrait-meta {
+        position: absolute;
+        top: 1020px;
+        right: 88px;
+        left: 88px;
+      }
+
+      .portrait-eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 14px;
+        color: var(--clay-7);
+        font-family: "Alta", "Helvetica Neue", sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.2em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .portrait-eyebrow::before {
+        display: block;
+        width: 42px;
+        height: 3px;
+        background: var(--clay-6);
+        content: "";
+      }
+
+      .portrait-name {
+        margin: 0;
+        color: var(--ink-9);
+        font-family: "Dorian", Georgia, serif;
+        font-size: 64px;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        line-height: 1;
+      }
+
+      .portrait-creds {
+        margin: 12px 0 0;
+        color: var(--ink-7);
+        font-family: "Alta", "Helvetica Neue", sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 0.12em;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+
+      .portrait-quote {
+        position: absolute;
+        right: 88px;
+        bottom: 90px;
+        left: 88px;
+        margin: 0;
+        padding-top: 22px;
+        border-top: 1px solid var(--sand-3);
+        color: var(--clay-7);
+        font-family: "Dorian", Georgia, serif;
+        font-size: 40px;
+        line-height: 1.25;
+      }
+
+      .class-tile {
+        padding: 72px;
+      }
+
+      .class-photo {
+        position: relative;
+        width: 936px;
+        height: 800px;
+        overflow: hidden;
+        border-radius: 46px;
+        box-shadow: 0 22px 46px rgba(47, 64, 56, 0.12);
+      }
+
+      .class-photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+
+      .class-title {
+        margin: 36px 0 0;
+        color: var(--ink-9);
+        font-family: "Dorian", Georgia, serif;
+        font-size: 68px;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        line-height: 1.03;
+      }
+
+      .class-copy {
+        max-width: 900px;
+        margin: 16px 0 0;
+        color: var(--ink-7);
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      .class-cta {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 36px;
+        color: var(--clay-7);
+        font-family: "Alta", "Helvetica Neue", sans-serif;
+        font-size: 26px;
+        letter-spacing: 0.02em;
+        line-height: 1;
+      }
+
+      .class-cta svg {
+        width: 24px;
+        height: 24px;
+        flex: none;
+        color: var(--clay-6);
+      }
+
+      .accent-rule {
+        position: absolute;
+        right: 88px;
+        bottom: 90px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--sage-7);
+        font-family: "Alta", "Helvetica Neue", sans-serif;
+        font-size: 15px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .accent-rule::before {
+        display: block;
+        width: 34px;
+        height: 1px;
+        background: var(--sage-5);
+        content: "";
+      }
+    </style>
+  </head>
+  <body>
+    <main class="poster">
+      <!-- 01 · MARCA -->
+      <section class="tile t1">
+        <div class="brand">
+          <span class="lotus"></span>
+          <span class="wordmark">Yoga con Noelia</span>
+        </div>
+
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <svg
+              class="sparkle"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 3c.7 4.6 3.7 7.6 8.3 8.3-4.6.7-7.6 3.7-8.3 8.3-.7-4.6-3.7-7.6-8.3-8.3C8.3 10.6 11.3 7.6 12 3Z" />
+            </svg>
+            Yoga somático
+          </div>
+          <h1>El yoga, una práctica<br /><span class="accent">posible para todos</span></h1>
+          <p class="lede">
+            No hace falta experiencia ni cumplir con determinadas condiciones
+            para comenzar. A través del cuerpo, la respiración y el movimiento,
+            cada persona puede encontrar su propia manera de practicar.
+          </p>
+          <div class="t1-trust">Desde 2016 · 500 RYT · ISYOGA</div>
+        </div>
+
+        <div class="t1-foot">
+          Adultos · Tercera edad · Niños · Seminarios
+          <span class="t1-sign">Noelia</span>
+        </div>
+      </section>
+
+      <!-- 02 · HERO -->
+      <section class="tile t2">
+        <div class="photo-frame">
+          <div class="photo hero-photo">
+            <img src="../../src/public/new-hero-sepia.jpg" alt="" />
+          </div>
+        </div>
+        <div class="hero-caption">
+          <span class="hero-label">Clases en grupo · Presencial y Zoom</span>
+          <span class="hero-cta">
+            Reserva tu primera clase
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 12h15" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+          </span>
+          <span class="hero-note">Un espacio para moverte a tu ritmo.</span>
+        </div>
+      </section>
+
+      <!-- 03 · SOBRE MÍ -->
+      <section class="tile t3">
+        <div class="portrait-wrap">
+          <div class="portrait">
+            <img src="../../src/public/noelia-hero.jpg" alt="" />
+          </div>
+        </div>
+        <div class="portrait-meta">
+          <div class="portrait-eyebrow">Sobre mí</div>
+          <h2 class="portrait-name">Noelia</h2>
+          <p class="portrait-creds">Profesora de yoga · 500 RYT · ISYOGA</p>
+        </div>
+        <p class="portrait-quote">La flexibilidad se aprende.</p>
+      </section>
+
+      <!-- 04 · ASHTANGA -->
+      <section class="tile t4 class-tile">
+        <div class="class-photo">
+          <img src="../source/real-ashtanga.jpg" alt="" />
+        </div>
+        <h2 class="class-title">Vinyasa Ashtanga</h2>
+        <p class="class-copy">
+          Una práctica dinámica basada en los principios del método Ashtanga
+          Vinyasa, en la que las posturas se enlazan a través de la respiración,
+          siguiendo una secuencia progresiva.
+        </p>
+        <span class="class-cta">Reservá tu lugar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></span>
+        <span class="accent-rule">Fuerza · respiración</span>
+      </section>
+
+      <!-- 05 · FLOW -->
+      <section class="tile t5 class-tile">
+        <div class="class-photo">
+          <img src="../source/real-flow.jpg" alt="" />
+        </div>
+        <h2 class="class-title">Vinyasa Flow</h2>
+        <p class="class-copy">
+          Secuencias fluidas y meditativas que cambian en cada clase. Ideal
+          para empezar.
+        </p>
+        <span class="class-cta">Reservá tu lugar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></span>
+        <span class="accent-rule">Fluidez · presencia</span>
+      </section>
+
+      <!-- 06 · SOMÁTICO -->
+      <section class="tile t6 class-tile">
+        <div class="class-photo">
+          <img src="../source/real-somatico.jpg" alt="" />
+        </div>
+        <h2 class="class-title">Vinculación Corporal</h2>
+        <p class="class-copy">
+          Movimiento somático para habitar el cuerpo, soltar tensiones y calmar
+          el sistema nervioso.
+        </p>
+        <span class="class-cta">Reservá tu lugar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15" /><path d="m13 6 6 6-6 6" /></svg></span>
+        <span class="accent-rule">Calma · conciencia</span>
+      </section>
+
+      <div class="grain"></div>
+    </main>
+  </body>
+</html>
